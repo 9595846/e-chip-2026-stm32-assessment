@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1500" viewBox="0 0 2400 1500" role="img" aria-label="光影精灵电子宠物总接线图">
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif}.title{font-size:38px;font-weight:700}.h{font-size:25px;font-weight:700}.t{font-size:19px}.s{font-size:16px}.tiny{font-size:14px}.box{stroke:#38536b;stroke-width:3}.wire{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.pwr{stroke:#e53935}.gnd{stroke:#263238}.i2c1{stroke:#e5aa00}.i2c2{stroke:#2962ff}.sig{stroke:#19a15f}.ctrl{stroke:#8e44ad}.servo{stroke:#ef7f1a}.uart{stroke:#7c4dff}.note{fill:#fff7d6;stroke:#d7aa3f;stroke-width:2}.pin{stroke:#fff;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="2400" height="1500" fill="#f7fafc"/>
+  <text x="70" y="65" class="title">“光影精灵”电子宠物｜四按键版总接线图</text>
+  <text x="72" y="103" class="t">STM32F103C8T6 · ST-Link SWD · 3.3V逻辑 · 舵机独立5V并与STM32共地</text>
+
+  <!-- rails -->
+  <rect x="90" y="128" width="2220" height="50" rx="12" fill="#fff" stroke="#c9d4df" stroke-width="2"/>
+  <line x1="130" y1="145" x2="2270" y2="145" class="wire pwr"/><text x="130" y="139" class="s" fill="#c62828">3.3V逻辑电源轨</text>
+  <line x1="130" y1="166" x2="2270" y2="166" class="wire gnd"/><text x="1990" y="161" class="s">公共GND</text>
+
+  <!-- MCU -->
+  <rect x="880" y="255" width="620" height="820" rx="22" fill="#31677f" class="box"/>
+  <text x="1010" y="310" class="title" fill="#fff">STM32F103C8T6</text>
+  <text x="1065" y="345" class="t" fill="#fff">Blue Pill / 最小系统板</text>
+  <line x1="1188" y1="375" x2="1188" y2="1030" stroke="#8bb3c5" stroke-width="2"/>
+  <!-- left pins -->
+  <g class="t" fill="#fff">
+    <text x="920" y="415" fill="#fff">PA0　LED1</text><circle cx="885" cy="408" r="8" fill="#19a15f" class="pin"/>
+    <text x="920" y="459" fill="#fff">PA1　光敏AO</text><circle cx="885" cy="452" r="8" fill="#19a15f" class="pin"/>
+    <text x="920" y="503" fill="#fff">PA2　DIG1</text><circle cx="885" cy="496" r="8" fill="#8e44ad" class="pin"/>
+    <text x="920" y="547" fill="#fff">PA3　DIG2</text><circle cx="885" cy="540" r="8" fill="#8e44ad" class="pin"/>
+    <text x="920" y="591" fill="#fff">PA4　DIG3</text><circle cx="885" cy="584" r="8" fill="#8e44ad" class="pin"/>
+    <text x="920" y="635" fill="#fff">PA5　DIG4</text><circle cx="885" cy="628" r="8" fill="#8e44ad" class="pin"/>
+    <text x="920" y="679" fill="#fff">PA6　编码器A</text><circle cx="885" cy="672" r="8" fill="#19a15f" class="pin"/>
+    <text x="920" y="723" fill="#fff">PA7　编码器B</text><circle cx="885" cy="716" r="8" fill="#19a15f" class="pin"/>
+    <text x="920" y="767" fill="#fff">PA8　舵机PWM</text><circle cx="885" cy="760" r="8" fill="#ef7f1a" class="pin"/>
+    <text x="920" y="811" fill="#fff">PA9　串口TX</text><circle cx="885" cy="804" r="8" fill="#7c4dff" class="pin"/>
+    <text x="920" y="855" fill="#fff">PA10 串口RX</text><circle cx="885" cy="848" r="8" fill="#7c4dff" class="pin"/>
+    <text x="920" y="899" fill="#fff">PB0　LED2</text><circle cx="885" cy="892" r="8" fill="#19a15f" class="pin"/>
+  </g>
+  <!-- right pins -->
+  <g class="t">
+    <text x="1240" y="415" fill="#fff">PB6　I²C SCL</text><circle cx="1495" cy="408" r="8" fill="#e5aa00" class="pin"/>
+    <text x="1240" y="459" fill="#fff">PB7　I²C SDA</text><circle cx="1495" cy="452" r="8" fill="#2962ff" class="pin"/>
+    <text x="1240" y="503" fill="#fff">PB8　KEY3</text><circle cx="1495" cy="496" r="8" fill="#19a15f" class="pin"/>
+    <text x="1240" y="547" fill="#fff">PB9　KEY4</text><circle cx="1495" cy="540" r="8" fill="#19a15f" class="pin"/>
+    <text x="1240" y="591" fill="#fff">PB10 MPU-SCL</text><circle cx="1495" cy="584" r="8" fill="#e5aa00" class="pin"/>
+    <text x="1240" y="635" fill="#fff">PB11 MPU-SDA</text><circle cx="1495" cy="628" r="8" fill="#2962ff" class="pin"/>
+    <text x="1240" y="679" fill="#fff">PB12 KEY1</text><circle cx="1495" cy="672" r="8" fill="#19a15f" class="pin"/>
+    <text x="1240" y="723" fill="#fff">PB13 595-LATCH</text><circle cx="1495" cy="716" r="8" fill="#8e44ad" class="pin"/>
+    <text x="1240" y="767" fill="#fff">PB14 蜂鸣器</text><circle cx="1495" cy="760" r="8" fill="#19a15f" class="pin"/>
+    <text x="1240" y="811" fill="#fff">PB15 KEY2</text><circle cx="1495" cy="804" r="8" fill="#19a15f" class="pin"/>
+    <text x="1240" y="855" fill="#fff">PA13 SWDIO</text><circle cx="1495" cy="848" r="8" fill="#7c4dff" class="pin"/>
+    <text x="1240" y="899" fill="#fff">PA14 SWCLK</text><circle cx="1495" cy="892" r="8" fill="#7c4dff" class="pin"/>
+  </g>
+  <rect x="1020" y="945" width="340" height="75" rx="10" fill="#244c60" stroke="#9bc2d5" stroke-width="2"/>
+  <text x="1050" y="978" class="h" fill="#fff">3.3V　　GND　　USB-C</text>
+  <text x="1075" y="1007" class="s" fill="#fff">逻辑电源　　　　板子供电</text>
+
+  <!-- left modules -->
+  <rect x="80" y="250" width="310" height="170" rx="15" fill="#315f74" class="box"/>
+  <text x="132" y="290" class="h" fill="#fff">OLED 0.96英寸</text><text x="150" y="320" class="s" fill="#fff">GND VCC SCL SDA</text>
+  <circle cx="130" cy="382" r="8" fill="#263238" class="pin"/><circle cx="205" cy="382" r="8" fill="#e53935" class="pin"/><circle cx="285" cy="382" r="8" fill="#e5aa00" class="pin"/><circle cx="350" cy="382" r="8" fill="#2962ff" class="pin"/>
+  <rect x="80" y="460" width="310" height="185" rx="15" fill="#385e8a" class="box"/>
+  <text x="125" y="500" class="h" fill="#fff">MPU6050 / GY-521</text><text x="110" y="535" class="s" fill="#fff">VCC GND SCL SDA　AD0→GND</text>
+  <circle cx="120" cy="603" r="8" fill="#e53935" class="pin"/><circle cx="180" cy="603" r="8" fill="#263238" class="pin"/><circle cx="250" cy="603" r="8" fill="#e5aa00" class="pin"/><circle cx="320" cy="603" r="8" fill="#2962ff" class="pin"/>
+  <rect x="80" y="690" width="310" height="165" rx="15" fill="#4d8b4f" class="box"/>
+  <text x="128" y="730" class="h" fill="#fff">光敏 AO/DO 模块</text><text x="112" y="765" class="s" fill="#fff">VCC　GND　AO→PA1　DO不接</text>
+  <circle cx="120" cy="817" r="8" fill="#e53935" class="pin"/><circle cx="185" cy="817" r="8" fill="#263238" class="pin"/><circle cx="255" cy="817" r="8" fill="#19a15f" class="pin"/><circle cx="325" cy="817" r="8" fill="#bbb" class="pin"/>
+  <rect x="80" y="900" width="310" height="160" rx="15" fill="#434950" class="box"/>
+  <text x="113" y="940" class="h" fill="#fff">MH-FMD 有源蜂鸣器</text><text x="125" y="975" class="s" fill="#fff">VCC　I/O→PB14　GND</text>
+  <circle cx="130" cy="1025" r="8" fill="#e53935" class="pin"/><circle cx="235" cy="1025" r="8" fill="#19a15f" class="pin"/><circle cx="340" cy="1025" r="8" fill="#263238" class="pin"/>
+
+  <!-- mid-left controls -->
+  <rect x="455" y="250" width="340" height="205" rx="15" fill="#e7f0f8" class="box"/>
+  <text x="520" y="290" class="h">EC11编码器（杜邦线）</text><circle cx="625" cy="350" r="42" fill="#adbcc8" stroke="#52697b" stroke-width="4"/>
+  <text x="500" y="425" class="s">A→PA6　B→PA7　C→GND</text>
+  <rect x="455" y="490" width="340" height="365" rx="15" fill="#e7f0f8" class="box"/>
+  <text x="538" y="530" class="h">四个独立按钮</text>
+  <g class="t"><text x="500" y="580">KEY1：PB12 ↔ 按钮 ↔ GND</text><text x="500" y="635">KEY2：PB15 ↔ 按钮 ↔ GND</text><text x="500" y="690">KEY3：PB8  ↔ 按钮 ↔ GND</text><text x="500" y="745">KEY4：PB9  ↔ 按钮 ↔ GND</text></g>
+  <text x="490" y="800" class="s">按键跨中缝，彼此间隔3～5列孔</text>
+  <rect x="455" y="900" width="340" height="160" rx="15" fill="#fff" class="box"/>
+  <text x="530" y="940" class="h">两只外置LED</text><text x="490" y="982" class="s">PA0→10kΩ(临时)→LED1；会偏暗</text><text x="490" y="1020" class="s">PB0→10kΩ(临时)→LED2；后续换1kΩ</text>
+
+  <!-- right modules -->
+  <rect x="1580" y="250" width="350" height="210" rx="15" fill="#6a4c93" class="box"/>
+  <text x="1685" y="292" class="h" fill="#fff">ST-Link</text><text x="1620" y="335" class="t" fill="#fff">SWDIO → PA13 / SWDIO</text><text x="1620" y="372" class="t" fill="#fff">SWCLK → PA14 / SWCLK</text><text x="1620" y="409" class="t" fill="#fff">GND → GND</text><text x="1620" y="440" class="s" fill="#fff">3.3V只作参考或单一供电</text>
+  <rect x="1980" y="250" width="330" height="210" rx="15" fill="#3f4650" class="box"/>
+  <text x="2062" y="292" class="h" fill="#fff">USB转串口</text><text x="2020" y="335" class="t" fill="#fff">TXD → PA10</text><text x="2020" y="372" class="t" fill="#fff">RXD → PA9</text><text x="2020" y="409" class="t" fill="#fff">GND → GND</text><text x="2020" y="440" class="s" fill="#fff">VCC / 5V / 3V3不接</text>
+  <rect x="1580" y="510" width="350" height="230" rx="15" fill="#fff0da" stroke="#d07b22" stroke-width="3"/>
+  <text x="1685" y="550" class="h">舵机尾巴</text><text x="1620" y="595" class="t">橙色信号线 → PA8</text><text x="1620" y="635" class="t">正极 → 独立5V正极</text><text x="1620" y="675" class="t">负极 → 独立5V负极</text><text x="1620" y="713" class="s">独立电源负极再接STM32 GND</text>
+  <rect x="1980" y="510" width="330" height="230" rx="15" fill="#fff0da" stroke="#d07b22" stroke-width="3"/>
+  <text x="2023" y="550" class="h">独立稳压5V电源</text><text x="2025" y="604" class="t">+5V ── 舵机正极</text><text x="2025" y="650" class="t">GND ── 舵机负极</text><text x="2025" y="696" class="t">GND ── STM32 GND</text>
+  <rect x="1580" y="790" width="730" height="270" rx="15" fill="#eef1ff" stroke="#6653a6" stroke-width="3"/>
+  <text x="1640" y="835" class="h">数码管驱动区（详见局部接线图）</text>
+  <rect x="1630" y="875" width="205" height="125" rx="10" fill="#777" stroke="#111" stroke-width="2"/><text x="1670" y="918" class="h" fill="#fff">74HC595</text><text x="1658" y="958" class="s" fill="#fff">当前暂不安装</text><text x="1650" y="982" class="s" fill="#fff">需重新分配引脚</text>
+  <text x="1860" y="913" class="t">PB10/PB11现用于MPU6050</text><text x="1860" y="955" class="t">数码管与74HC595继续停用</text><text x="1860" y="995" class="s">启用前必须更新接线图和程序</text>
+
+  <!-- key signal wires, intentionally simplified -->
+  <path d="M390 330 L650 330 L650 200 L1450 200 L1450 408 L1495 408" class="wire i2c1"/>
+  <path d="M390 360 L675 360 L675 218 L1470 218 L1470 452 L1495 452" class="wire i2c2"/>
+  <path d="M250 603 L430 603 L430 1160 L1515 1160 L1515 584 L1495 584" class="wire i2c1"/><path d="M320 603 L450 603 L450 1185 L1540 1185 L1540 628 L1495 628" class="wire i2c2"/>
+  <path d="M255 817 L430 817 L430 452 L885 452" class="wire sig"/>
+  <path d="M235 1025 L430 1025 L430 1100 L1535 1100 L1535 760 L1495 760" class="wire sig"/>
+  <path d="M795 345 L840 345 L840 672 L885 672" class="wire sig"/><path d="M795 375 L825 375 L825 716 L885 716" class="wire sig"/>
+  <path d="M1930 595 L1540 595 L1540 1120 L830 1120 L830 760 L885 760" class="wire servo"/>
+  <path d="M1580 335 L1535 335 L1535 848 L1495 848" class="wire uart"/><path d="M1580 372 L1555 372 L1555 892 L1495 892" class="wire uart"/>
+  <path d="M1980 335 L1565 335 L1565 1150 L815 1150 L815 848 L885 848" class="wire uart"/><path d="M1980 372 L1585 372 L1585 1175 L800 1175 L800 804 L885 804" class="wire uart"/>
+
+  <!-- bottom warnings -->
+  <rect x="90" y="1210" width="2220" height="220" rx="18" class="note"/>
+  <text x="125" y="1255" class="h">上电前必须核对</text>
+  <text x="125" y="1300" class="t">① 所有3.3V模块共用逻辑GND；舵机使用独立5V，但其负极必须与STM32 GND相连。</text>
+  <text x="125" y="1340" class="t">② 数码管每条段线都要串限流电阻，四个位选使用PNP高边驱动；S8550的E/B/C顺序按手中实物确认。</text>
+  <text x="125" y="1380" class="t">③ 光敏DO悬空；PB14上电先输出高电平；PA13/PA14只留给ST-Link；模块杜邦线尽量短并插牢。</text>
+  <text x="125" y="1417" class="s">总图为了可读性只画关键线路；逐针连接以配套文档和数码管局部详图为准。</text>
+</svg>
+

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1500" viewBox="0 0 2400 1500" role="img" aria-label="光影精灵电子宠物面包板安装布局图">
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif}.title{font-size:38px;font-weight:700}.h{font-size:24px;font-weight:700}.t{font-size:18px}.s{font-size:15px}.board{fill:#fff;stroke:#738494;stroke-width:4}.rail{stroke-width:5}.red{stroke:#e53935}.blue{stroke:#2364d8}.black{stroke:#263238}.green{stroke:#19a15f}.orange{stroke:#ed7d1a}.purple{stroke:#8e44ad}.wire{fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.module{stroke:#40566b;stroke-width:3}.note{fill:#fff7d6;stroke:#d6a63b;stroke-width:2}.hole{fill:#fff;stroke:#aab5bf;stroke-width:1.5}
+  </style></defs>
+  <rect width="2400" height="1500" fill="#f5f8fb"/>
+  <text x="65" y="62" class="title">“光影精灵”电子宠物｜面包板安装布局建议</text>
+  <text x="68" y="100" class="t">器件位置按区域规划；不同品牌面包板孔位编号不同，最终逐针连接以《pet_pin_plan.md》为准</text>
+
+  <!-- external modules -->
+  <rect x="65" y="145" width="275" height="155" rx="14" fill="#315f74" class="module"/><text x="130" y="185" class="h" fill="#fff">OLED（外接）</text><text x="95" y="225" class="s" fill="#fff">GND VCC SCL SDA</text><text x="92" y="265" class="s" fill="#fff">→ GND 3.3V PB6 PB7</text>
+  <rect x="370" y="145" width="315" height="155" rx="14" fill="#385e8a" class="module"/><text x="430" y="185" class="h" fill="#fff">MPU6050（固定）</text><text x="400" y="225" class="s" fill="#fff">VCC GND SCL SDA AD0</text><text x="400" y="265" class="s" fill="#fff">3.3V GND PB10 PB11 GND</text>
+  <rect x="715" y="145" width="285" height="155" rx="14" fill="#4d8b4f" class="module"/><text x="765" y="185" class="h" fill="#fff">光敏模块</text><text x="750" y="225" class="s" fill="#fff">VCC GND AO DO</text><text x="750" y="265" class="s" fill="#fff">3.3V GND PA1 悬空</text>
+  <rect x="1030" y="145" width="300" height="155" rx="14" fill="#424a55" class="module"/><text x="1080" y="185" class="h" fill="#fff">MH-FMD蜂鸣器</text><text x="1070" y="225" class="s" fill="#fff">VCC I/O GND</text><text x="1070" y="265" class="s" fill="#fff">3.3V PB14 GND</text>
+  <rect x="1360" y="145" width="300" height="155" rx="14" fill="#eaf1f7" class="module"/><text x="1430" y="185" class="h">EC11编码器</text><text x="1410" y="225" class="s">A→PA6　B→PA7</text><text x="1410" y="265" class="s">公共端C→GND</text>
+  <rect x="1690" y="145" width="300" height="155" rx="14" fill="#fff0da" stroke="#d07b22" stroke-width="3"/><text x="1780" y="185" class="h">舵机尾巴</text><text x="1730" y="225" class="s">信号→PA8；正极→独立5V</text><text x="1730" y="265" class="s">负极→电源GND→STM32 GND</text>
+  <rect x="2020" y="145" width="310" height="155" rx="14" fill="#704d96" class="module"/><text x="2115" y="185" class="h" fill="#fff">ST-Link</text><text x="2055" y="225" class="s" fill="#fff">SWDIO PA13 / SWCLK PA14</text><text x="2055" y="265" class="s" fill="#fff">GND共地；使用专用SWD座</text>
+
+  <!-- breadboard -->
+  <rect x="120" y="350" width="2160" height="800" rx="22" class="board"/>
+  <line x1="175" y1="390" x2="2225" y2="390" class="rail red"/><line x1="175" y1="420" x2="2225" y2="420" class="rail blue"/>
+  <text x="170" y="380" class="s" fill="#c62828">+3.3V</text><text x="2160" y="445" class="s" fill="#1e55b4">GND</text>
+  <line x1="175" y1="1075" x2="2225" y2="1075" class="rail red"/><line x1="175" y1="1105" x2="2225" y2="1105" class="rail blue"/>
+  <text x="170" y="1065" class="s" fill="#c62828">+3.3V</text><text x="2160" y="1130" class="s" fill="#1e55b4">GND</text>
+  <line x1="160" y1="740" x2="2240" y2="740" stroke="#d3dbe2" stroke-width="18"/>
+  <text x="1120" y="747" class="s" fill="#71808c">面包板中缝</text>
+  <!-- hole field hints -->
+  <g opacity="0.75">
+    <circle cx="205" cy="500" r="5" class="hole"/><circle cx="245" cy="500" r="5" class="hole"/><circle cx="285" cy="500" r="5" class="hole"/><circle cx="325" cy="500" r="5" class="hole"/><circle cx="365" cy="500" r="5" class="hole"/>
+    <circle cx="205" cy="970" r="5" class="hole"/><circle cx="245" cy="970" r="5" class="hole"/><circle cx="285" cy="970" r="5" class="hole"/><circle cx="325" cy="970" r="5" class="hole"/><circle cx="365" cy="970" r="5" class="hole"/>
+  </g>
+
+  <!-- buttons across gutter, spaced -->
+  <g>
+    <rect x="210" y="610" width="150" height="250" rx="12" fill="#e9f1f7" class="module"/><rect x="245" y="690" width="80" height="90" rx="10" fill="#aebbc6" stroke="#566a7c" stroke-width="3"/><text x="246" y="650" class="h">KEY1</text><text x="228" y="820" class="s">PB12 / GND</text>
+    <rect x="405" y="610" width="150" height="250" rx="12" fill="#e9f1f7" class="module"/><rect x="440" y="690" width="80" height="90" rx="10" fill="#aebbc6" stroke="#566a7c" stroke-width="3"/><text x="441" y="650" class="h">KEY2</text><text x="423" y="820" class="s">PB15 / GND</text>
+    <rect x="600" y="610" width="150" height="250" rx="12" fill="#e9f1f7" class="module"/><rect x="635" y="690" width="80" height="90" rx="10" fill="#aebbc6" stroke="#566a7c" stroke-width="3"/><text x="636" y="650" class="h">KEY3</text><text x="625" y="820" class="s">PB8 / GND</text>
+    <rect x="795" y="610" width="150" height="250" rx="12" fill="#e9f1f7" class="module"/><rect x="830" y="690" width="80" height="90" rx="10" fill="#aebbc6" stroke="#566a7c" stroke-width="3"/><text x="831" y="650" class="h">KEY4</text><text x="820" y="820" class="s">PB9 / GND</text>
+  </g>
+
+  <!-- MCU across center gutter -->
+  <rect x="1010" y="470" width="390" height="540" rx="16" fill="#31677f" class="module"/>
+  <text x="1065" y="520" class="h" fill="#fff">STM32F103C8T6</text><text x="1110" y="552" class="s" fill="#fff">跨中缝安装</text>
+  <line x1="1045" y1="580" x2="1365" y2="580" stroke="#95bfce" stroke-width="2"/>
+  <g class="s" fill="#fff"><text x="1045" y="620" fill="#fff">左侧：PA0～PA10等</text><text x="1045" y="655" fill="#fff">右侧：PB0～PB15等</text><text x="1045" y="690" fill="#fff">顶部专用SWD接口</text><text x="1045" y="725" fill="#fff">USB-C用于板子供电</text><text x="1045" y="790" fill="#fff">PA13/PA14不要另作他用</text><text x="1045" y="825" fill="#fff">舵机5V不进此电源轨</text></g>
+  <rect x="1090" y="885" width="230" height="78" rx="8" fill="#244c60" stroke="#9bc2d5" stroke-width="2"/><text x="1120" y="920" class="h" fill="#fff">3.3V　GND</text><text x="1135" y="950" class="s" fill="#fff">接上下电源轨</text>
+
+  <!-- display driver area -->
+  <rect x="1485" y="485" width="190" height="460" rx="12" fill="#777" class="module"/><text x="1520" y="530" class="h" fill="#fff">74HC595</text><text x="1505" y="585" class="s" fill="#fff">当前暂不安装</text><text x="1505" y="630" class="s" fill="#fff">PB10/PB11已给</text><text x="1515" y="660" class="s" fill="#fff">MPU6050</text><text x="1505" y="720" class="s" fill="#fff">启用数码管前</text><text x="1505" y="755" class="s" fill="#fff">必须重新分配</text><text x="1515" y="790" class="s" fill="#fff">控制引脚</text>
+  <rect x="1740" y="500" width="460" height="280" rx="15" fill="#24272d" stroke="#111" stroke-width="4"/><text x="1870" y="545" class="h" fill="#fff">5461BS-1 正面</text>
+  <g fill="none" stroke="#dc4444" stroke-width="10" stroke-linecap="round"><path d="M1800 600h50 M1792 610v50 M1858 610v50 M1800 670h50"/><path d="M1900 600h50 M1892 610v50 M1958 610v50 M1900 670h50"/><path d="M2000 600h50 M1992 610v50 M2058 610v50 M2000 670h50"/><path d="M2100 600h50 M2092 610v50 M2158 610v50 M2100 670h50"/></g>
+  <text x="1765" y="745" class="s" fill="#fff">8×330Ω从595输出接A～G、DP</text>
+  <rect x="1740" y="830" width="460" height="170" rx="12" fill="#fff0da" stroke="#d07b22" stroke-width="3"/><text x="1790" y="870" class="h">4×S8550位选驱动</text><text x="1780" y="910" class="s">PA2/3/4/5 → 2只10k并联 → 基极</text><text x="1780" y="945" class="s">各基极另用10k上拉；E→3.3V</text><text x="1780" y="980" class="s">C→12/9/8/6脚</text>
+
+  <!-- rail links and grouping arrows -->
+  <path d="M1205 885 L1205 390" class="wire red"/><path d="M1250 963 L1250 1105" class="wire blue"/><path d="M1205 390 L1205 1075" class="wire red" opacity="0.35"/><path d="M1250 420 L1250 1105" class="wire blue" opacity="0.35"/>
+  <path d="M200 300 L200 350" class="wire green"/><path d="M525 300 L525 350" class="wire green"/><path d="M855 300 L855 350" class="wire green"/><path d="M1180 300 L1180 350" class="wire green"/><path d="M1510 300 L1510 350" class="wire green"/><path d="M1840 300 L1840 350" class="wire orange"/><path d="M2175 300 L2175 350" class="wire purple"/>
+
+  <rect x="120" y="1195" width="2160" height="225" rx="16" class="note"/>
+  <text x="160" y="1240" class="h">安装顺序与物理注意事项</text>
+  <text x="160" y="1285" class="t">① 先把STM32和四个按钮跨中缝插好，再布3.3V和GND；74HC595、数码管暂不安装。</text>
+  <text x="160" y="1325" class="t">② OLED、MPU6050、光敏、蜂鸣器、编码器、舵机均可放在面包板外，用短杜邦线连接；MPU6050必须固定在宠物主体。</text>
+  <text x="160" y="1365" class="t">③ 面包板上下电源轨可能中间断开，应先用万用表测通；舵机电源线不要与I²C线长距离并排。</text>
+  <text x="160" y="1405" class="s">这张图表示“器件放哪里”；逐针接法看总接线图和数码管局部详图。三张图必须配合使用。</text>
+</svg>
+

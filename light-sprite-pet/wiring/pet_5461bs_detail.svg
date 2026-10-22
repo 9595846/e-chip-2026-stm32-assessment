@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1500" viewBox="0 0 2400 1500" role="img" aria-label="5461BS-1四位数码管与74HC595详细接线图">
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif}.title{font-size:38px;font-weight:700}.h{font-size:25px;font-weight:700}.t{font-size:19px}.s{font-size:16px}.tiny{font-size:14px}.box{stroke:#40566b;stroke-width:3}.wire{fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red{stroke:#e53935}.black{stroke:#263238}.green{stroke:#16a060}.purple{stroke:#8e44ad}.orange{stroke:#ed7d1a}.pin{stroke:#fff;stroke-width:2}.note{fill:#fff7d8;stroke:#d5a63b;stroke-width:2}
+  </style></defs>
+  <rect width="2400" height="1500" fill="#f8fafc"/>
+  <text x="70" y="65" class="title">5461BS-1 四位共阳极数码管｜74HC595＋S8550详细接线</text>
+  <text x="72" y="105" class="t">正面数字朝向自己且正立：左下角为1脚；下排左→右为1～6，上排右→左为7～12</text>
+
+  <!-- STM controls -->
+  <rect x="70" y="190" width="390" height="660" rx="18" fill="#31677f" class="box"/>
+  <text x="125" y="240" class="h" fill="#fff">STM32 控制引脚</text>
+  <g class="t"><text x="115" y="310" fill="#fff">PB10 → 595 DS</text><text x="115" y="375" fill="#fff">PB11 → 595 SH_CP</text><text x="115" y="440" fill="#fff">PB13 → 595 ST_CP</text><text x="115" y="535" fill="#fff">PA2 → DIG1</text><text x="115" y="600" fill="#fff">PA3 → DIG2</text><text x="115" y="665" fill="#fff">PA4 → DIG3</text><text x="115" y="730" fill="#fff">PA5 → DIG4</text></g>
+  <g><circle cx="455" cy="303" r="8" fill="#8e44ad" class="pin"/><circle cx="455" cy="368" r="8" fill="#8e44ad" class="pin"/><circle cx="455" cy="433" r="8" fill="#8e44ad" class="pin"/><circle cx="455" cy="528" r="8" fill="#ed7d1a" class="pin"/><circle cx="455" cy="593" r="8" fill="#ed7d1a" class="pin"/><circle cx="455" cy="658" r="8" fill="#ed7d1a" class="pin"/><circle cx="455" cy="723" r="8" fill="#ed7d1a" class="pin"/></g>
+  <text x="105" y="790" class="s" fill="#fff">TIM4每约1ms切换一位</text><text x="105" y="820" class="s" fill="#fff">先关位→送段码→再开新位</text>
+
+  <!-- 595 -->
+  <rect x="650" y="180" width="500" height="700" rx="18" fill="#303846" class="box"/>
+  <text x="805" y="230" class="h" fill="#fff">74HC595（3.3V）</text>
+  <text x="690" y="280" class="s" fill="#fff">缺口朝上：左侧1～8由上至下，右侧16～9由上至下</text>
+  <g class="t">
+    <text x="690" y="335" fill="#fff">15 Q0 → A</text><text x="690" y="385" fill="#fff">1　Q1 → B</text><text x="690" y="435" fill="#fff">2　Q2 → C</text><text x="690" y="485" fill="#fff">3　Q3 → D</text><text x="690" y="535" fill="#fff">4　Q4 → E</text><text x="690" y="585" fill="#fff">5　Q5 → F</text><text x="690" y="635" fill="#fff">6　Q6 → G</text><text x="690" y="685" fill="#fff">7　Q7 → DP</text>
+    <text x="930" y="335" fill="#fff">16 VCC → 3.3V</text><text x="930" y="385" fill="#fff">14 DS ← PB10</text><text x="930" y="435" fill="#fff">13 OE → GND</text><text x="930" y="485" fill="#fff">12 ST_CP ← PB13</text><text x="930" y="535" fill="#fff">11 SH_CP ← PB11</text><text x="930" y="585" fill="#fff">10 MR → 3.3V</text><text x="930" y="635" fill="#fff">9 Q7S → 不接</text><text x="930" y="685" fill="#fff">8 GND → GND</text>
+  </g>
+  <rect x="735" y="735" width="330" height="95" rx="10" fill="#434d5d" stroke="#9aa9b8" stroke-width="2"/><text x="760" y="774" class="t" fill="#fff">0.1µF：16脚 ↔ 8脚</text><text x="770" y="805" class="s" fill="#fff">电容尽量靠近芯片</text>
+
+  <!-- segment resistors -->
+  <rect x="1260" y="185" width="340" height="690" rx="18" fill="#fff" class="box"/>
+  <text x="1312" y="230" class="h">8只段限流电阻</text><text x="1310" y="265" class="s">需补220～470Ω；推荐330Ω</text>
+  <g class="t"><text x="1310" y="335">Q0 ─330Ω─ A／11脚</text><text x="1310" y="385">Q1 ─330Ω─ B／7脚</text><text x="1310" y="435">Q2 ─330Ω─ C／4脚</text><text x="1310" y="485">Q3 ─330Ω─ D／2脚</text><text x="1310" y="535">Q4 ─330Ω─ E／1脚</text><text x="1310" y="585">Q5 ─330Ω─ F／10脚</text><text x="1310" y="635">Q6 ─330Ω─ G／5脚</text><text x="1310" y="685">Q7 ─330Ω─ DP／3脚</text></g>
+  <text x="1305" y="755" class="s">电阻可放在595与数码管之间，</text><text x="1305" y="782" class="s">顺序不影响功能，但不能省略。</text>
+
+  <!-- display -->
+  <rect x="1750" y="210" width="570" height="420" rx="20" fill="#24272d" stroke="#111" stroke-width="4"/>
+  <text x="1900" y="265" class="h" fill="#fff">5461BS-1 正面</text>
+  <g fill="none" stroke="#d74242" stroke-width="13" stroke-linecap="round">
+    <path d="M1815 320h55 M1805 330v55 M1880 330v55 M1815 397h55 M1805 409v55 M1880 409v55 M1815 477h55"/>
+    <path d="M1940 320h55 M1930 330v55 M2005 330v55 M1940 397h55 M1930 409v55 M2005 409v55 M1940 477h55"/>
+    <path d="M2065 320h55 M2055 330v55 M2130 330v55 M2065 397h55 M2055 409v55 M2130 409v55 M2065 477h55"/>
+    <path d="M2190 320h55 M2180 330v55 M2255 330v55 M2190 397h55 M2180 409v55 M2255 409v55 M2190 477h55"/>
+  </g>
+  <circle cx="2290" cy="480" r="9" fill="#d74242"/>
+  <g class="s" fill="#fff"><text x="1782" y="595" fill="#fff">下排：1　2　3　4　5　6 →</text><text x="1968" y="235" fill="#fff">← 上排：12　11　10　9　8　7</text></g>
+
+  <!-- PNP section -->
+  <rect x="550" y="970" width="1770" height="370" rx="18" fill="#fff2df" stroke="#d07c24" stroke-width="3"/>
+  <text x="610" y="1018" class="h">四个位选均采用S8550 PNP高边驱动</text>
+  <text x="610" y="1060" class="t">每一路：E→3.3V；C→数码管公共阳极；STM32→两只10k并联(约5k)→B；B再用一只10k上拉到3.3V。</text>
+  <g class="t"><text x="635" y="1135">PA2 → Q1基极，Q1集电极 → 数码管12脚（DIG1，最左位）</text><text x="635" y="1185">PA3 → Q2基极，Q2集电极 → 数码管9脚（DIG2）</text><text x="635" y="1235">PA4 → Q3基极，Q3集电极 → 数码管8脚（DIG3）</text><text x="635" y="1285">PA5 → Q4基极，Q4集电极 → 数码管6脚（DIG4，最右位）</text></g>
+  <rect x="1450" y="1110" width="790" height="175" rx="12" class="note"/>
+  <text x="1490" y="1150" class="h">逻辑方向</text><text x="1490" y="1192" class="t">位选GPIO输出低电平 → PNP导通 → 该位允许点亮</text><text x="1490" y="1232" class="t">595某段输出低电平 → 对应LED段点亮</text><text x="1490" y="1268" class="s">换位时先关闭四位，防止重影。S8550脚序必须按实物核对。</text>
+
+  <!-- control wires -->
+  <path d="M455 303 L560 303 L560 385 L650 385" class="wire purple"/><path d="M455 368 L585 368 L585 535 L650 535" class="wire purple"/><path d="M455 433 L610 433 L610 485 L650 485" class="wire purple"/>
+  <path d="M1150 335 L1260 335" class="wire green"/><path d="M1150 385 L1260 385" class="wire green"/><path d="M1150 435 L1260 435" class="wire green"/><path d="M1150 485 L1260 485" class="wire green"/><path d="M1150 535 L1260 535" class="wire green"/><path d="M1150 585 L1260 585" class="wire green"/><path d="M1150 635 L1260 635" class="wire green"/><path d="M1150 685 L1260 685" class="wire green"/>
+
+  <rect x="70" y="1390" width="2250" height="70" rx="12" class="note"/><text x="105" y="1435" class="t">首次上电：不插舵机；先测3.3V无短路，再显示8888，随后逐位测试。任何一位异常常见原因是数码管方向、S8550脚序或位选逻辑反了。</text>
+</svg>
+

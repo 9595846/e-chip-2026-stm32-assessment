@@ -1,0 +1,21 @@
+# Keil generated files
+Objects/
+Listings/
+*.uvoptx
+*.uvguix.*
+*.crf
+*.d
+*.o
+*.axf
+*.elf
+*.map
+*.lst
+*.htm
+*.dep
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.bak
+*.orig
+
