@@ -17,7 +17,7 @@ static int16_t g_prev_ax, g_prev_ay, g_prev_az;
 static uint8_t g_have_mpu_sample;
 static uint8_t g_mpu_address;
 
-static int32_t magnitude(int16_t a, int16_t b, int16_t c)
+static int32_t magnitude(int32_t a, int32_t b, int32_t c)
 {
     int32_t aa = a < 0 ? -(int32_t)a : (int32_t)a;
     int32_t bb = b < 0 ? -(int32_t)b : (int32_t)b;
@@ -64,12 +64,18 @@ static int mpu_start(void)
 
 static int mpu_sample(void)
 {
-    return mpu_read_word(0x3Bu, &g_data.ax) &&
-           mpu_read_word(0x3Du, &g_data.ay) &&
-           mpu_read_word(0x3Fu, &g_data.az) &&
-           mpu_read_word(0x43u, &g_data.gx) &&
-           mpu_read_word(0x45u, &g_data.gy) &&
-           mpu_read_word(0x47u, &g_data.gz);
+    SensorData sample = g_data;
+    if (!mpu_read_word(0x3Bu, &sample.ax) ||
+        !mpu_read_word(0x3Du, &sample.ay) ||
+        !mpu_read_word(0x3Fu, &sample.az) ||
+        !mpu_read_word(0x43u, &sample.gx) ||
+        !mpu_read_word(0x45u, &sample.gy) ||
+        !mpu_read_word(0x47u, &sample.gz)) {
+        return 0;
+    }
+    /* Publish motion values only after every register read succeeds. */
+    g_data = sample;
+    return 1;
 }
 
 static void offer_event(SensorEvent event, uint32_t now, uint32_t cooldown)
@@ -122,11 +128,17 @@ void sensors_task(uint32_t now)
         if ((int32_t)(now - g_retry_at) >= 0) {
             g_retry_at = now + 1000u;
             g_data.mpu_online = (uint8_t)(mpu_start() ? 1u : 0u);
+            g_have_mpu_sample = 0u;
+            if (g_data.mpu_online) {
+                g_last_motion = now;
+                g_quiet_sent = 0u;
+            }
         }
         return;
     }
     if (!mpu_sample()) {
         g_data.mpu_online = 0u;
+        g_have_mpu_sample = 0u;
         g_retry_at = now + 1000u;
         return;
     }
@@ -137,9 +149,9 @@ void sensors_task(uint32_t now)
     }
     gyro_activity = magnitude(g_data.gx, g_data.gy, g_data.gz);
     accel_change = magnitude(
-        (int16_t)(g_data.ax - g_prev_ax),
-        (int16_t)(g_data.ay - g_prev_ay),
-        (int16_t)(g_data.az - g_prev_az));
+        (int32_t)g_data.ax - g_prev_ax,
+        (int32_t)g_data.ay - g_prev_ay,
+        (int32_t)g_data.az - g_prev_az);
     g_prev_ax = g_data.ax; g_prev_ay = g_data.ay; g_prev_az = g_data.az;
 
     if (gyro_activity >= MPU_SHAKE_THRESHOLD || accel_change >= MPU_SHAKE_ACCEL_DELTA) {
@@ -170,4 +182,3 @@ void sensors_task(uint32_t now) { (void)now; }
 const SensorData *sensors_data(void) { return &g_data; }
 SensorEvent sensors_take_event(void) { return SENSOR_EVENT_NONE; }
 #endif
-
