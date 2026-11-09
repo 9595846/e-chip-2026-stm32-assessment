@@ -1,0 +1,3488 @@
+{
+  "format": "wiring-workbench",
+  "version": 1,
+  "doc": {
+    "version": 1,
+    "title": "光影精灵 · Stage6 接线与核对",
+    "powerDisplay": "full",
+    "modules": [
+      {
+        "id": "mcu",
+        "templateId": "tpl_mcu",
+        "name": "STM32F103C8T6",
+        "kind": "主控 · Stage6 / 64MHz",
+        "version": 1,
+        "x": 900,
+        "y": 220,
+        "w": 360,
+        "h": 1320,
+        "pins": [
+          {
+            "id": "3.3V",
+            "name": "3.3V",
+            "side": "top",
+            "offset": 100,
+            "voltage": "3.3V",
+            "role": "逻辑电源输入",
+            "electrical": {
+              "type": "power_in",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "GND",
+            "name": "GND",
+            "side": "top",
+            "offset": 260,
+            "voltage": "0V",
+            "role": "GND",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PB6",
+            "name": "PB6",
+            "side": "left",
+            "offset": 80,
+            "voltage": "0-3.3V",
+            "role": "OLED SCL / I2C1",
+            "electrical": {
+              "type": "open_drain",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PB7",
+            "name": "PB7",
+            "side": "left",
+            "offset": 110,
+            "voltage": "0-3.3V",
+            "role": "OLED SDA / I2C1",
+            "electrical": {
+              "type": "open_drain",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PB10",
+            "name": "PB10",
+            "side": "left",
+            "offset": 350,
+            "voltage": "0-3.3V",
+            "role": "IMU SCL / 软件I2C",
+            "electrical": {
+              "type": "open_drain",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PB11",
+            "name": "PB11",
+            "side": "left",
+            "offset": 380,
+            "voltage": "0-3.3V",
+            "role": "IMU SDA / 软件I2C",
+            "electrical": {
+              "type": "open_drain",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PA1",
+            "name": "PA1",
+            "side": "left",
+            "offset": 630,
+            "voltage": "0-3.3V",
+            "role": "光敏 AO / ADC1_IN1",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PA6",
+            "name": "PA6",
+            "side": "left",
+            "offset": 900,
+            "voltage": "0-3.3V",
+            "role": "编码器 A / TIM3_CH1",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PA7",
+            "name": "PA7",
+            "side": "left",
+            "offset": 930,
+            "voltage": "0-3.3V",
+            "role": "编码器 B / TIM3_CH2",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PA0",
+            "name": "PA0",
+            "side": "right",
+            "offset": 80,
+            "voltage": "0-3.3V",
+            "role": "LED1 高有效",
+            "electrical": {
+              "type": "output",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PB0",
+            "name": "PB0",
+            "side": "right",
+            "offset": 250,
+            "voltage": "0-3.3V",
+            "role": "LED2 高有效",
+            "electrical": {
+              "type": "output",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PB14",
+            "name": "PB14",
+            "side": "right",
+            "offset": 430,
+            "voltage": "0-3.3V",
+            "role": "蜂鸣器低有效",
+            "electrical": {
+              "type": "output",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PA8",
+            "name": "PA8",
+            "side": "right",
+            "offset": 640,
+            "voltage": "0-3.3V",
+            "role": "舵机 PWM / TIM1_CH1",
+            "electrical": {
+              "type": "output",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PA9",
+            "name": "PA9",
+            "side": "right",
+            "offset": 890,
+            "voltage": "0-3.3V",
+            "role": "USART1 TX",
+            "electrical": {
+              "type": "output",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PA10",
+            "name": "PA10",
+            "side": "right",
+            "offset": 920,
+            "voltage": "0-3.3V",
+            "role": "USART1 RX",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PA13",
+            "name": "PA13",
+            "side": "right",
+            "offset": 1130,
+            "voltage": "0-3.3V",
+            "role": "SWDIO 专用调试口",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PA14",
+            "name": "PA14",
+            "side": "right",
+            "offset": 1160,
+            "voltage": "0-3.3V",
+            "role": "SWCLK 专用调试口",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "PB12",
+            "name": "PB12",
+            "side": "bottom",
+            "offset": 55,
+            "voltage": "0-3.3V",
+            "role": "按键输入，内部上拉",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "present"
+            }
+          },
+          {
+            "id": "PB15",
+            "name": "PB15",
+            "side": "bottom",
+            "offset": 135,
+            "voltage": "0-3.3V",
+            "role": "按键输入，内部上拉",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "present"
+            }
+          },
+          {
+            "id": "PB8",
+            "name": "PB8",
+            "side": "bottom",
+            "offset": 215,
+            "voltage": "0-3.3V",
+            "role": "按键输入，内部上拉",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "present"
+            }
+          },
+          {
+            "id": "PB9",
+            "name": "PB9",
+            "side": "bottom",
+            "offset": 295,
+            "voltage": "0-3.3V",
+            "role": "按键输入，内部上拉",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "present"
+            }
+          }
+        ]
+      },
+      {
+        "id": "oled",
+        "templateId": "tpl_oled",
+        "name": "0.96 OLED · I²C",
+        "kind": "显示 · 地址 0x3C，驱动型号待核对",
+        "version": 1,
+        "x": 200,
+        "y": 240,
+        "w": 300,
+        "h": 170,
+        "pins": [
+          {
+            "id": "VCC",
+            "name": "VCC",
+            "side": "left",
+            "offset": 75,
+            "voltage": "3.3V",
+            "role": "VCC",
+            "electrical": {
+              "type": "power_in",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "GND",
+            "name": "GND",
+            "side": "left",
+            "offset": 120,
+            "voltage": "0V",
+            "role": "GND",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "SCL",
+            "name": "SCL",
+            "side": "right",
+            "offset": 60,
+            "voltage": "0-3.3V",
+            "role": "SCL",
+            "electrical": {
+              "type": "open_drain",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "SDA",
+            "name": "SDA",
+            "side": "right",
+            "offset": 90,
+            "voltage": "0-3.3V",
+            "role": "SDA",
+            "electrical": {
+              "type": "open_drain",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "mpu",
+        "templateId": "tpl_mpu",
+        "name": "MPU 模块 · 型号待核实",
+        "kind": "传感器 · 当前固件要求 WHO=68/69",
+        "version": 1,
+        "x": 200,
+        "y": 480,
+        "w": 300,
+        "h": 240,
+        "pins": [
+          {
+            "id": "VCC",
+            "name": "VCC",
+            "side": "left",
+            "offset": 60,
+            "voltage": "3.3V",
+            "role": "VCC",
+            "electrical": {
+              "type": "power_in",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "GND",
+            "name": "GND",
+            "side": "left",
+            "offset": 105,
+            "voltage": "0V",
+            "role": "GND",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "AD0",
+            "name": "AD0",
+            "side": "left",
+            "offset": 150,
+            "voltage": "0-3.3V",
+            "role": "AD0",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "SCL",
+            "name": "SCL",
+            "side": "right",
+            "offset": 90,
+            "voltage": "0-3.3V",
+            "role": "SCL",
+            "electrical": {
+              "type": "open_drain",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "SDA",
+            "name": "SDA",
+            "side": "right",
+            "offset": 120,
+            "voltage": "0-3.3V",
+            "role": "SDA",
+            "electrical": {
+              "type": "open_drain",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "INT",
+            "name": "INT",
+            "side": "bottom",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "INT",
+            "electrical": {
+              "type": "passive",
+              "required": false,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "XDA",
+            "name": "XDA",
+            "side": "bottom",
+            "offset": 150,
+            "voltage": "未知",
+            "role": "XDA",
+            "electrical": {
+              "type": "passive",
+              "required": false,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "XCL",
+            "name": "XCL",
+            "side": "bottom",
+            "offset": 230,
+            "voltage": "未知",
+            "role": "XCL",
+            "electrical": {
+              "type": "passive",
+              "required": false,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "light",
+        "templateId": "tpl_light",
+        "name": "光敏模块 AO / DO",
+        "kind": "传感器 · 使用模拟量 AO",
+        "version": 1,
+        "x": 200,
+        "y": 780,
+        "w": 300,
+        "h": 170,
+        "pins": [
+          {
+            "id": "VCC",
+            "name": "VCC",
+            "side": "left",
+            "offset": 70,
+            "voltage": "3.3V",
+            "role": "VCC",
+            "electrical": {
+              "type": "power_in",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "GND",
+            "name": "GND",
+            "side": "left",
+            "offset": 115,
+            "voltage": "0V",
+            "role": "GND",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "AO",
+            "name": "AO",
+            "side": "right",
+            "offset": 70,
+            "voltage": "0-3.3V",
+            "role": "AO",
+            "electrical": {
+              "type": "output",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "DO",
+            "name": "DO",
+            "side": "bottom",
+            "offset": 150,
+            "voltage": "未知",
+            "role": "DO",
+            "electrical": {
+              "type": "passive",
+              "required": false,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "encoder",
+        "templateId": "tpl_encoder",
+        "name": "旋钮编码器 · A/B",
+        "kind": "无源触点式假定，需核对实物",
+        "version": 1,
+        "x": 200,
+        "y": 1040,
+        "w": 300,
+        "h": 170,
+        "pins": [
+          {
+            "id": "COM",
+            "name": "COM",
+            "side": "left",
+            "offset": 110,
+            "voltage": "0V",
+            "role": "COM",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "A",
+            "name": "A",
+            "side": "right",
+            "offset": 80,
+            "voltage": "未知",
+            "role": "A",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "B",
+            "name": "B",
+            "side": "right",
+            "offset": 110,
+            "voltage": "未知",
+            "role": "B",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "r1",
+        "templateId": "tpl_r1",
+        "name": "R1 · 限流电阻",
+        "kind": "每颗 LED 独立一只，阻值待核对",
+        "version": 1,
+        "x": 1470,
+        "y": 230,
+        "w": 190,
+        "h": 110,
+        "pins": [
+          {
+            "id": "IN",
+            "name": "IN",
+            "side": "left",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "IN",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "OUT",
+            "name": "OUT",
+            "side": "right",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "OUT",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "led1",
+        "templateId": "tpl_led1",
+        "name": "LED1",
+        "kind": "阳极 A / 阴极 K",
+        "version": 1,
+        "x": 1790,
+        "y": 230,
+        "w": 210,
+        "h": 110,
+        "pins": [
+          {
+            "id": "A",
+            "name": "A",
+            "side": "left",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "A",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "K",
+            "name": "K",
+            "side": "right",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "K",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "r2",
+        "templateId": "tpl_r2",
+        "name": "R2 · 限流电阻",
+        "kind": "每颗 LED 独立一只，阻值待核对",
+        "version": 1,
+        "x": 1470,
+        "y": 400,
+        "w": 190,
+        "h": 110,
+        "pins": [
+          {
+            "id": "IN",
+            "name": "IN",
+            "side": "left",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "IN",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "OUT",
+            "name": "OUT",
+            "side": "right",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "OUT",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "led2",
+        "templateId": "tpl_led2",
+        "name": "LED2",
+        "kind": "阳极 A / 阴极 K",
+        "version": 1,
+        "x": 1790,
+        "y": 400,
+        "w": 210,
+        "h": 110,
+        "pins": [
+          {
+            "id": "A",
+            "name": "A",
+            "side": "left",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "A",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "K",
+            "name": "K",
+            "side": "right",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "K",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "buzzer",
+        "templateId": "tpl_buzzer",
+        "name": "MH-FMD 蜂鸣器",
+        "kind": "低电平触发 · VCC 暂不接",
+        "version": 1,
+        "x": 1540,
+        "y": 570,
+        "w": 290,
+        "h": 180,
+        "pins": [
+          {
+            "id": "I/O",
+            "name": "I/O",
+            "side": "left",
+            "offset": 80,
+            "voltage": "未知",
+            "role": "3.3V 控制兼容性待确认",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "VCC",
+            "name": "VCC",
+            "side": "right",
+            "offset": 75,
+            "voltage": "未知",
+            "role": "供电电压未确认，确认前不连接",
+            "electrical": {
+              "type": "power_in",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "GND",
+            "name": "GND",
+            "side": "right",
+            "offset": 130,
+            "voltage": "0V",
+            "role": "GND",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "servo",
+        "templateId": "tpl_servo",
+        "name": "尾巴舵机 · 型号待核对",
+        "kind": "信号 PA8 · 电源独立 5V",
+        "version": 1,
+        "x": 1540,
+        "y": 800,
+        "w": 290,
+        "h": 160,
+        "pins": [
+          {
+            "id": "SIG",
+            "name": "SIG",
+            "side": "left",
+            "offset": 60,
+            "voltage": "未知",
+            "role": "需确认接收 3.3V PWM",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "+",
+            "name": "+",
+            "side": "right",
+            "offset": 60,
+            "voltage": "5V",
+            "role": "+",
+            "electrical": {
+              "type": "power_in",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "-",
+            "name": "-",
+            "side": "right",
+            "offset": 110,
+            "voltage": "0V",
+            "role": "-",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "uart",
+        "templateId": "tpl_uart",
+        "name": "USB 转 TTL 串口",
+        "kind": "115200 8N1 · 需确认 3.3V 电平",
+        "version": 1,
+        "x": 1540,
+        "y": 1030,
+        "w": 290,
+        "h": 180,
+        "pins": [
+          {
+            "id": "RXD",
+            "name": "RXD",
+            "side": "left",
+            "offset": 80,
+            "voltage": "未知",
+            "role": "RXD",
+            "electrical": {
+              "type": "input",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "TXD",
+            "name": "TXD",
+            "side": "left",
+            "offset": 110,
+            "voltage": "未知",
+            "role": "TXD",
+            "electrical": {
+              "type": "output",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "GND",
+            "name": "GND",
+            "side": "right",
+            "offset": 130,
+            "voltage": "0V",
+            "role": "GND",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "VCC",
+            "name": "VCC",
+            "side": "bottom",
+            "offset": 145,
+            "voltage": "未知",
+            "role": "VCC",
+            "electrical": {
+              "type": "passive",
+              "required": false,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "stlink",
+        "templateId": "tpl_stlink",
+        "name": "ST-Link · SWD",
+        "kind": "使用开发板专用下载接口",
+        "version": 1,
+        "x": 1540,
+        "y": 1250,
+        "w": 290,
+        "h": 240,
+        "pins": [
+          {
+            "id": "SWDIO",
+            "name": "SWDIO",
+            "side": "left",
+            "offset": 100,
+            "voltage": "0-3.3V",
+            "role": "SWDIO",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "SWCLK",
+            "name": "SWCLK",
+            "side": "left",
+            "offset": 130,
+            "voltage": "0-3.3V",
+            "role": "SWCLK",
+            "electrical": {
+              "type": "output",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "GND",
+            "name": "GND",
+            "side": "right",
+            "offset": 160,
+            "voltage": "0V",
+            "role": "GND",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "VTref?",
+            "name": "VTref?",
+            "side": "bottom",
+            "offset": 70,
+            "voltage": "未知",
+            "role": "VTref?",
+            "electrical": {
+              "type": "passive",
+              "required": false,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "NRST?",
+            "name": "NRST?",
+            "side": "bottom",
+            "offset": 210,
+            "voltage": "未知",
+            "role": "NRST?",
+            "electrical": {
+              "type": "passive",
+              "required": false,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "power3",
+        "templateId": "tpl_power3",
+        "name": "3.3V 逻辑电源",
+        "kind": "设计电压 · 来源/容量待确认",
+        "version": 1,
+        "x": 200,
+        "y": 1320,
+        "w": 300,
+        "h": 150,
+        "pins": [
+          {
+            "id": "+",
+            "name": "+",
+            "side": "right",
+            "offset": 65,
+            "voltage": "3.3V",
+            "role": "+",
+            "electrical": {
+              "type": "power_out",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "-",
+            "name": "-",
+            "side": "right",
+            "offset": 115,
+            "voltage": "0V",
+            "role": "-",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "power5",
+        "templateId": "tpl_power5",
+        "name": "舵机独立 5V 电源",
+        "kind": "输出能力、极性须实测确认",
+        "version": 1,
+        "x": 2120,
+        "y": 800,
+        "w": 300,
+        "h": 160,
+        "pins": [
+          {
+            "id": "+",
+            "name": "+",
+            "side": "left",
+            "offset": 60,
+            "voltage": "5V",
+            "role": "+",
+            "electrical": {
+              "type": "power_out",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "-",
+            "name": "-",
+            "side": "left",
+            "offset": 110,
+            "voltage": "0V",
+            "role": "-",
+            "electrical": {
+              "type": "gnd",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "key1",
+        "templateId": "tpl_key1",
+        "name": "KEY1 · PB12",
+        "kind": "两个独立触点，按下导通",
+        "version": 1,
+        "x": 300,
+        "y": 1690,
+        "w": 250,
+        "h": 140,
+        "pins": [
+          {
+            "id": "触点1",
+            "name": "触点1",
+            "side": "top",
+            "offset": 125,
+            "voltage": "未知",
+            "role": "触点1",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "触点2",
+            "name": "触点2",
+            "side": "bottom",
+            "offset": 125,
+            "voltage": "0V",
+            "role": "触点2",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "key2",
+        "templateId": "tpl_key2",
+        "name": "KEY2 · PB15",
+        "kind": "两个独立触点，按下导通",
+        "version": 1,
+        "x": 750,
+        "y": 1690,
+        "w": 250,
+        "h": 140,
+        "pins": [
+          {
+            "id": "触点1",
+            "name": "触点1",
+            "side": "top",
+            "offset": 125,
+            "voltage": "未知",
+            "role": "触点1",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "触点2",
+            "name": "触点2",
+            "side": "bottom",
+            "offset": 125,
+            "voltage": "0V",
+            "role": "触点2",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "key3",
+        "templateId": "tpl_key3",
+        "name": "KEY3 · PB8",
+        "kind": "两个独立触点，按下导通",
+        "version": 1,
+        "x": 1200,
+        "y": 1690,
+        "w": 250,
+        "h": 140,
+        "pins": [
+          {
+            "id": "触点1",
+            "name": "触点1",
+            "side": "top",
+            "offset": 125,
+            "voltage": "未知",
+            "role": "触点1",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "触点2",
+            "name": "触点2",
+            "side": "bottom",
+            "offset": 125,
+            "voltage": "0V",
+            "role": "触点2",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "id": "key4",
+        "templateId": "tpl_key4",
+        "name": "KEY4 · PB9",
+        "kind": "两个独立触点，按下导通",
+        "version": 1,
+        "x": 1650,
+        "y": 1690,
+        "w": 250,
+        "h": 140,
+        "pins": [
+          {
+            "id": "触点1",
+            "name": "触点1",
+            "side": "top",
+            "offset": 125,
+            "voltage": "未知",
+            "role": "触点1",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          },
+          {
+            "id": "触点2",
+            "name": "触点2",
+            "side": "bottom",
+            "offset": 125,
+            "voltage": "0V",
+            "role": "触点2",
+            "electrical": {
+              "type": "passive",
+              "required": true,
+              "pullup": "unknown"
+            }
+          }
+        ]
+      }
+    ],
+    "wires": [
+      {
+        "id": "w1",
+        "a": {
+          "module": "mcu",
+          "pin": "PA0"
+        },
+        "b": {
+          "module": "r1",
+          "pin": "IN"
+        },
+        "name": "LED1",
+        "purpose": "GPIO → 电阻 → LED 阳极",
+        "color": "#c18b33",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w2",
+        "a": {
+          "module": "r1",
+          "pin": "OUT"
+        },
+        "b": {
+          "module": "led1",
+          "pin": "A"
+        },
+        "name": "LED1_A",
+        "purpose": "LED1_A",
+        "color": "#c18b33",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w3",
+        "a": {
+          "module": "led1",
+          "pin": "K"
+        },
+        "b": {
+          "node": "n_led1_K"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w4",
+        "a": {
+          "module": "mcu",
+          "pin": "PB0"
+        },
+        "b": {
+          "module": "r2",
+          "pin": "IN"
+        },
+        "name": "LED2",
+        "purpose": "GPIO → 电阻 → LED 阳极",
+        "color": "#c18b33",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w5",
+        "a": {
+          "module": "r2",
+          "pin": "OUT"
+        },
+        "b": {
+          "module": "led2",
+          "pin": "A"
+        },
+        "name": "LED2_A",
+        "purpose": "LED2_A",
+        "color": "#c18b33",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w6",
+        "a": {
+          "module": "led2",
+          "pin": "K"
+        },
+        "b": {
+          "node": "n_led2_K"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w7",
+        "a": {
+          "module": "mcu",
+          "pin": "3.3V"
+        },
+        "b": {
+          "node": "n_mcu_3.3V"
+        },
+        "name": "",
+        "purpose": "同名网络相连；+3V3",
+        "color": "#c27536",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w8",
+        "a": {
+          "module": "mcu",
+          "pin": "GND"
+        },
+        "b": {
+          "node": "n_mcu_GND"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w9",
+        "a": {
+          "module": "oled",
+          "pin": "VCC"
+        },
+        "b": {
+          "node": "n_oled_VCC"
+        },
+        "name": "",
+        "purpose": "同名网络相连；+3V3",
+        "color": "#c27536",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w10",
+        "a": {
+          "module": "oled",
+          "pin": "GND"
+        },
+        "b": {
+          "node": "n_oled_GND"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w11",
+        "a": {
+          "module": "mpu",
+          "pin": "VCC"
+        },
+        "b": {
+          "node": "n_mpu_VCC"
+        },
+        "name": "",
+        "purpose": "同名网络相连；+3V3",
+        "color": "#c27536",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w12",
+        "a": {
+          "module": "mpu",
+          "pin": "GND"
+        },
+        "b": {
+          "node": "n_mpu_GND"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w13",
+        "a": {
+          "module": "mpu",
+          "pin": "AD0"
+        },
+        "b": {
+          "node": "n_mpu_AD0"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w14",
+        "a": {
+          "module": "light",
+          "pin": "VCC"
+        },
+        "b": {
+          "node": "n_light_VCC"
+        },
+        "name": "",
+        "purpose": "同名网络相连；+3V3",
+        "color": "#c27536",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w15",
+        "a": {
+          "module": "light",
+          "pin": "GND"
+        },
+        "b": {
+          "node": "n_light_GND"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w16",
+        "a": {
+          "module": "encoder",
+          "pin": "COM"
+        },
+        "b": {
+          "node": "n_encoder_COM"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w17",
+        "a": {
+          "module": "power3",
+          "pin": "+"
+        },
+        "b": {
+          "node": "n_power3_+"
+        },
+        "name": "",
+        "purpose": "同名网络相连；+3V3",
+        "color": "#c27536",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w18",
+        "a": {
+          "module": "power3",
+          "pin": "-"
+        },
+        "b": {
+          "node": "n_power3_-"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w19",
+        "a": {
+          "module": "buzzer",
+          "pin": "GND"
+        },
+        "b": {
+          "node": "n_buzzer_GND"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w20",
+        "a": {
+          "module": "servo",
+          "pin": "+"
+        },
+        "b": {
+          "node": "n_servo_+"
+        },
+        "name": "",
+        "purpose": "同名网络相连；+5V_SERVO",
+        "color": "#b14d3c",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w21",
+        "a": {
+          "module": "servo",
+          "pin": "-"
+        },
+        "b": {
+          "node": "n_servo_-"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w22",
+        "a": {
+          "module": "power5",
+          "pin": "+"
+        },
+        "b": {
+          "node": "n_power5_+"
+        },
+        "name": "",
+        "purpose": "同名网络相连；+5V_SERVO",
+        "color": "#b14d3c",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w23",
+        "a": {
+          "module": "power5",
+          "pin": "-"
+        },
+        "b": {
+          "node": "n_power5_-"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w24",
+        "a": {
+          "module": "uart",
+          "pin": "GND"
+        },
+        "b": {
+          "node": "n_uart_GND"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w25",
+        "a": {
+          "module": "stlink",
+          "pin": "GND"
+        },
+        "b": {
+          "node": "n_stlink_GND"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w26",
+        "a": {
+          "module": "mcu",
+          "pin": "PB6"
+        },
+        "b": {
+          "module": "oled",
+          "pin": "SCL"
+        },
+        "name": "OLED_SCL",
+        "purpose": "OLED_SCL",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w27",
+        "a": {
+          "module": "mcu",
+          "pin": "PB7"
+        },
+        "b": {
+          "module": "oled",
+          "pin": "SDA"
+        },
+        "name": "OLED_SDA",
+        "purpose": "OLED_SDA",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w28",
+        "a": {
+          "module": "mcu",
+          "pin": "PB10"
+        },
+        "b": {
+          "module": "mpu",
+          "pin": "SCL"
+        },
+        "name": "MPU_SCL",
+        "purpose": "MPU_SCL",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w29",
+        "a": {
+          "module": "mcu",
+          "pin": "PB11"
+        },
+        "b": {
+          "module": "mpu",
+          "pin": "SDA"
+        },
+        "name": "MPU_SDA",
+        "purpose": "MPU_SDA",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w30",
+        "a": {
+          "module": "mcu",
+          "pin": "PA1"
+        },
+        "b": {
+          "module": "light",
+          "pin": "AO"
+        },
+        "name": "LIGHT_AO",
+        "purpose": "LIGHT_AO",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w31",
+        "a": {
+          "module": "mcu",
+          "pin": "PA6"
+        },
+        "b": {
+          "module": "encoder",
+          "pin": "A"
+        },
+        "name": "ENC_A",
+        "purpose": "ENC_A",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w32",
+        "a": {
+          "module": "mcu",
+          "pin": "PA7"
+        },
+        "b": {
+          "module": "encoder",
+          "pin": "B"
+        },
+        "name": "ENC_B",
+        "purpose": "ENC_B",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w33",
+        "a": {
+          "module": "mcu",
+          "pin": "PB14"
+        },
+        "b": {
+          "module": "buzzer",
+          "pin": "I/O"
+        },
+        "name": "BUZZER_LOW",
+        "purpose": "BUZZER_LOW",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w34",
+        "a": {
+          "module": "mcu",
+          "pin": "PA8"
+        },
+        "b": {
+          "module": "servo",
+          "pin": "SIG"
+        },
+        "name": "SERVO_PWM",
+        "purpose": "SERVO_PWM",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w35",
+        "a": {
+          "module": "mcu",
+          "pin": "PA9"
+        },
+        "b": {
+          "module": "uart",
+          "pin": "RXD"
+        },
+        "name": "UART_TX",
+        "purpose": "UART_TX",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w36",
+        "a": {
+          "module": "mcu",
+          "pin": "PA10"
+        },
+        "b": {
+          "module": "uart",
+          "pin": "TXD"
+        },
+        "name": "UART_RX",
+        "purpose": "UART_RX",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w37",
+        "a": {
+          "module": "mcu",
+          "pin": "PA13"
+        },
+        "b": {
+          "module": "stlink",
+          "pin": "SWDIO"
+        },
+        "name": "SWDIO",
+        "purpose": "SWDIO",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w38",
+        "a": {
+          "module": "mcu",
+          "pin": "PA14"
+        },
+        "b": {
+          "module": "stlink",
+          "pin": "SWCLK"
+        },
+        "name": "SWCLK",
+        "purpose": "SWCLK",
+        "color": "#347d75",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w39",
+        "a": {
+          "module": "key1",
+          "pin": "触点2"
+        },
+        "b": {
+          "node": "n_key1_触点2"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w40",
+        "a": {
+          "module": "mcu",
+          "pin": "PB12"
+        },
+        "b": {
+          "module": "key1",
+          "pin": "触点1"
+        },
+        "name": "KEY1",
+        "purpose": "PB12 内部上拉，按下接地",
+        "color": "#347d75",
+        "style": "ortho",
+        "bends": [
+          {
+            "x": 955,
+            "y": 1570
+          },
+          {
+            "x": 425,
+            "y": 1570
+          }
+        ]
+      },
+      {
+        "id": "w41",
+        "a": {
+          "module": "key2",
+          "pin": "触点2"
+        },
+        "b": {
+          "node": "n_key2_触点2"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w42",
+        "a": {
+          "module": "mcu",
+          "pin": "PB15"
+        },
+        "b": {
+          "module": "key2",
+          "pin": "触点1"
+        },
+        "name": "KEY2",
+        "purpose": "PB15 内部上拉，按下接地",
+        "color": "#347d75",
+        "style": "ortho",
+        "bends": [
+          {
+            "x": 1035,
+            "y": 1590
+          },
+          {
+            "x": 875,
+            "y": 1590
+          }
+        ]
+      },
+      {
+        "id": "w43",
+        "a": {
+          "module": "key3",
+          "pin": "触点2"
+        },
+        "b": {
+          "node": "n_key3_触点2"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w44",
+        "a": {
+          "module": "mcu",
+          "pin": "PB8"
+        },
+        "b": {
+          "module": "key3",
+          "pin": "触点1"
+        },
+        "name": "KEY3",
+        "purpose": "PB8 内部上拉，按下接地",
+        "color": "#347d75",
+        "style": "ortho",
+        "bends": [
+          {
+            "x": 1115,
+            "y": 1590
+          },
+          {
+            "x": 1325,
+            "y": 1590
+          }
+        ]
+      },
+      {
+        "id": "w45",
+        "a": {
+          "module": "key4",
+          "pin": "触点2"
+        },
+        "b": {
+          "node": "n_key4_触点2"
+        },
+        "name": "",
+        "purpose": "同名网络相连；GND",
+        "color": "#6b7682",
+        "style": "straight",
+        "bends": []
+      },
+      {
+        "id": "w46",
+        "a": {
+          "module": "mcu",
+          "pin": "PB9"
+        },
+        "b": {
+          "module": "key4",
+          "pin": "触点1"
+        },
+        "name": "KEY4",
+        "purpose": "PB9 内部上拉，按下接地",
+        "color": "#347d75",
+        "style": "ortho",
+        "bends": [
+          {
+            "x": 1195,
+            "y": 1570
+          },
+          {
+            "x": 1775,
+            "y": 1570
+          }
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "n_led1_K",
+        "kind": "net",
+        "name": "GND",
+        "x": 2075,
+        "y": 300
+      },
+      {
+        "id": "n_led2_K",
+        "kind": "net",
+        "name": "GND",
+        "x": 2075,
+        "y": 470
+      },
+      {
+        "id": "n_mcu_3.3V",
+        "kind": "net",
+        "name": "+3V3",
+        "x": 1000,
+        "y": 160
+      },
+      {
+        "id": "n_mcu_GND",
+        "kind": "net",
+        "name": "GND",
+        "x": 1160,
+        "y": 160
+      },
+      {
+        "id": "n_oled_VCC",
+        "kind": "net",
+        "name": "+3V3",
+        "x": 100,
+        "y": 315
+      },
+      {
+        "id": "n_oled_GND",
+        "kind": "net",
+        "name": "GND",
+        "x": 100,
+        "y": 360
+      },
+      {
+        "id": "n_mpu_VCC",
+        "kind": "net",
+        "name": "+3V3",
+        "x": 100,
+        "y": 540
+      },
+      {
+        "id": "n_mpu_GND",
+        "kind": "net",
+        "name": "GND",
+        "x": 100,
+        "y": 585
+      },
+      {
+        "id": "n_mpu_AD0",
+        "kind": "net",
+        "name": "GND",
+        "x": 100,
+        "y": 630
+      },
+      {
+        "id": "n_light_VCC",
+        "kind": "net",
+        "name": "+3V3",
+        "x": 100,
+        "y": 850
+      },
+      {
+        "id": "n_light_GND",
+        "kind": "net",
+        "name": "GND",
+        "x": 100,
+        "y": 895
+      },
+      {
+        "id": "n_encoder_COM",
+        "kind": "net",
+        "name": "GND",
+        "x": 100,
+        "y": 1150
+      },
+      {
+        "id": "n_power3_+",
+        "kind": "net",
+        "name": "+3V3",
+        "x": 580,
+        "y": 1385
+      },
+      {
+        "id": "n_power3_-",
+        "kind": "net",
+        "name": "GND",
+        "x": 580,
+        "y": 1435
+      },
+      {
+        "id": "n_buzzer_GND",
+        "kind": "net",
+        "name": "GND",
+        "x": 1910,
+        "y": 700
+      },
+      {
+        "id": "n_servo_+",
+        "kind": "net",
+        "name": "+5V_SERVO",
+        "x": 1910,
+        "y": 860
+      },
+      {
+        "id": "n_servo_-",
+        "kind": "net",
+        "name": "GND",
+        "x": 1910,
+        "y": 910
+      },
+      {
+        "id": "n_power5_+",
+        "kind": "net",
+        "name": "+5V_SERVO",
+        "x": 2000,
+        "y": 860
+      },
+      {
+        "id": "n_power5_-",
+        "kind": "net",
+        "name": "GND",
+        "x": 2000,
+        "y": 910
+      },
+      {
+        "id": "n_uart_GND",
+        "kind": "net",
+        "name": "GND",
+        "x": 1910,
+        "y": 1160
+      },
+      {
+        "id": "n_stlink_GND",
+        "kind": "net",
+        "name": "GND",
+        "x": 1910,
+        "y": 1410
+      },
+      {
+        "id": "n_key1_触点2",
+        "kind": "net",
+        "name": "GND",
+        "x": 425,
+        "y": 1880
+      },
+      {
+        "id": "n_key2_触点2",
+        "kind": "net",
+        "name": "GND",
+        "x": 875,
+        "y": 1880
+      },
+      {
+        "id": "n_key3_触点2",
+        "kind": "net",
+        "name": "GND",
+        "x": 1325,
+        "y": 1880
+      },
+      {
+        "id": "n_key4_触点2",
+        "kind": "net",
+        "name": "GND",
+        "x": 1775,
+        "y": 1880
+      }
+    ],
+    "annotations": [
+      {
+        "id": "a0",
+        "kind": "note",
+        "text": "光影精灵 / 光敏精灵 · Stage6 接线总览",
+        "x": 70,
+        "y": 20,
+        "w": 1000,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a1",
+        "kind": "note",
+        "text": "同名 +3V3 / GND / +5V_SERVO 标记表示相连；导线交叉不代表接通。模块针脚位置按阅读布局，不是实物针序。",
+        "x": 70,
+        "y": 55,
+        "w": 1600,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a2",
+        "kind": "note",
+        "text": "代码来源 6792331efe9d · 静态文档核对；未重新编译、未完成本图实物验收。",
+        "x": 70,
+        "y": 90,
+        "w": 1500,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a3",
+        "kind": "note",
+        "text": "两路 I²C 分开：OLED PB6/7；MPU PB10/11。",
+        "x": 70,
+        "y": 1220,
+        "w": 800,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a4",
+        "kind": "note",
+        "text": "检查是否已有 3.3V 上拉；无则每根 SCL/SDA 补 10kΩ。",
+        "x": 70,
+        "y": 1250,
+        "w": 820,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a5",
+        "kind": "note",
+        "text": "两路总线共最多补四只；不得拉到 5V，不盲目并联。",
+        "x": 70,
+        "y": 1280,
+        "w": 820,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a6",
+        "kind": "note",
+        "text": "蜂鸣器 VCC 待查标签/资料，确认前不接。",
+        "x": 1880,
+        "y": 565,
+        "w": 620,
+        "h": 30,
+        "color": "#a74632"
+      },
+      {
+        "id": "a7",
+        "kind": "note",
+        "text": "I/O 对 3.3V GPIO 的兼容性也待确认。",
+        "x": 1880,
+        "y": 605,
+        "w": 600,
+        "h": 30,
+        "color": "#a74632"
+      },
+      {
+        "id": "a8",
+        "kind": "note",
+        "text": "5V 仅送舵机正极；GND 与 STM32 共地。",
+        "x": 1900,
+        "y": 980,
+        "w": 600,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a9",
+        "kind": "note",
+        "text": "舵机线色不能代替正负极/信号确认。",
+        "x": 1900,
+        "y": 1015,
+        "w": 550,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a10",
+        "kind": "note",
+        "text": "串口 VCC 不接。TX/RX 交叉，先核对逻辑电平。",
+        "x": 1470,
+        "y": 1210,
+        "w": 800,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a11",
+        "kind": "note",
+        "text": "3.3V 电源只选择一路，不并联 USB/下载器/外部电源输出。",
+        "x": 70,
+        "y": 2050,
+        "w": 1000,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a12",
+        "kind": "note",
+        "text": "若采用 ST-Link 3.3V 输出供逻辑电路：先核实确有输出且容量够；VTref 可能只是检测输入。",
+        "x": 70,
+        "y": 2090,
+        "w": 1450,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a13",
+        "kind": "note",
+        "text": "按键分散安装；四脚按键先用万用表找两组不同触点，再接 GPIO 与 GND。",
+        "x": 70,
+        "y": 1900,
+        "w": 1500,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a14",
+        "kind": "note",
+        "text": "未接入：5461BS-1 数码管 / 74HC595；MPU INT/XDA/XCL；光敏 DO；编码器按压开关。",
+        "x": 70,
+        "y": 1940,
+        "w": 1550,
+        "h": 30,
+        "color": "#4c6659"
+      },
+      {
+        "id": "a15",
+        "kind": "note",
+        "text": "若实际 IMU WHO=0x70：当前固件仅接受 0x68/0x69，须另行确认兼容性，不应直接判为接线故障。",
+        "x": 70,
+        "y": 1980,
+        "w": 1800,
+        "h": 30,
+        "color": "#a74632"
+      }
+    ]
+  },
+  "library": [
+    {
+      "id": "tpl_mcu",
+      "name": "STM32F103C8T6",
+      "kind": "主控 · Stage6 / 64MHz",
+      "version": 1,
+      "w": 360,
+      "h": 1320,
+      "pins": [
+        {
+          "id": "3.3V",
+          "name": "3.3V",
+          "side": "top",
+          "offset": 100,
+          "voltage": "3.3V",
+          "role": "逻辑电源输入",
+          "electrical": {
+            "type": "power_in",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "GND",
+          "name": "GND",
+          "side": "top",
+          "offset": 260,
+          "voltage": "0V",
+          "role": "GND",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PB6",
+          "name": "PB6",
+          "side": "left",
+          "offset": 80,
+          "voltage": "0-3.3V",
+          "role": "OLED SCL / I2C1",
+          "electrical": {
+            "type": "open_drain",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PB7",
+          "name": "PB7",
+          "side": "left",
+          "offset": 110,
+          "voltage": "0-3.3V",
+          "role": "OLED SDA / I2C1",
+          "electrical": {
+            "type": "open_drain",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PB10",
+          "name": "PB10",
+          "side": "left",
+          "offset": 350,
+          "voltage": "0-3.3V",
+          "role": "IMU SCL / 软件I2C",
+          "electrical": {
+            "type": "open_drain",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PB11",
+          "name": "PB11",
+          "side": "left",
+          "offset": 380,
+          "voltage": "0-3.3V",
+          "role": "IMU SDA / 软件I2C",
+          "electrical": {
+            "type": "open_drain",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PA1",
+          "name": "PA1",
+          "side": "left",
+          "offset": 630,
+          "voltage": "0-3.3V",
+          "role": "光敏 AO / ADC1_IN1",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PA6",
+          "name": "PA6",
+          "side": "left",
+          "offset": 900,
+          "voltage": "0-3.3V",
+          "role": "编码器 A / TIM3_CH1",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PA7",
+          "name": "PA7",
+          "side": "left",
+          "offset": 930,
+          "voltage": "0-3.3V",
+          "role": "编码器 B / TIM3_CH2",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PA0",
+          "name": "PA0",
+          "side": "right",
+          "offset": 80,
+          "voltage": "0-3.3V",
+          "role": "LED1 高有效",
+          "electrical": {
+            "type": "output",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PB0",
+          "name": "PB0",
+          "side": "right",
+          "offset": 250,
+          "voltage": "0-3.3V",
+          "role": "LED2 高有效",
+          "electrical": {
+            "type": "output",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PB14",
+          "name": "PB14",
+          "side": "right",
+          "offset": 430,
+          "voltage": "0-3.3V",
+          "role": "蜂鸣器低有效",
+          "electrical": {
+            "type": "output",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PA8",
+          "name": "PA8",
+          "side": "right",
+          "offset": 640,
+          "voltage": "0-3.3V",
+          "role": "舵机 PWM / TIM1_CH1",
+          "electrical": {
+            "type": "output",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PA9",
+          "name": "PA9",
+          "side": "right",
+          "offset": 890,
+          "voltage": "0-3.3V",
+          "role": "USART1 TX",
+          "electrical": {
+            "type": "output",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PA10",
+          "name": "PA10",
+          "side": "right",
+          "offset": 920,
+          "voltage": "0-3.3V",
+          "role": "USART1 RX",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PA13",
+          "name": "PA13",
+          "side": "right",
+          "offset": 1130,
+          "voltage": "0-3.3V",
+          "role": "SWDIO 专用调试口",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PA14",
+          "name": "PA14",
+          "side": "right",
+          "offset": 1160,
+          "voltage": "0-3.3V",
+          "role": "SWCLK 专用调试口",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "PB12",
+          "name": "PB12",
+          "side": "bottom",
+          "offset": 55,
+          "voltage": "0-3.3V",
+          "role": "按键输入，内部上拉",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "present"
+          }
+        },
+        {
+          "id": "PB15",
+          "name": "PB15",
+          "side": "bottom",
+          "offset": 135,
+          "voltage": "0-3.3V",
+          "role": "按键输入，内部上拉",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "present"
+          }
+        },
+        {
+          "id": "PB8",
+          "name": "PB8",
+          "side": "bottom",
+          "offset": 215,
+          "voltage": "0-3.3V",
+          "role": "按键输入，内部上拉",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "present"
+          }
+        },
+        {
+          "id": "PB9",
+          "name": "PB9",
+          "side": "bottom",
+          "offset": 295,
+          "voltage": "0-3.3V",
+          "role": "按键输入，内部上拉",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "present"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_oled",
+      "name": "0.96 OLED · I²C",
+      "kind": "显示 · 地址 0x3C，驱动型号待核对",
+      "version": 1,
+      "w": 300,
+      "h": 170,
+      "pins": [
+        {
+          "id": "VCC",
+          "name": "VCC",
+          "side": "left",
+          "offset": 75,
+          "voltage": "3.3V",
+          "role": "VCC",
+          "electrical": {
+            "type": "power_in",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "GND",
+          "name": "GND",
+          "side": "left",
+          "offset": 120,
+          "voltage": "0V",
+          "role": "GND",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "SCL",
+          "name": "SCL",
+          "side": "right",
+          "offset": 60,
+          "voltage": "0-3.3V",
+          "role": "SCL",
+          "electrical": {
+            "type": "open_drain",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "SDA",
+          "name": "SDA",
+          "side": "right",
+          "offset": 90,
+          "voltage": "0-3.3V",
+          "role": "SDA",
+          "electrical": {
+            "type": "open_drain",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_mpu",
+      "name": "MPU 模块 · 型号待核实",
+      "kind": "传感器 · 当前固件要求 WHO=68/69",
+      "version": 1,
+      "w": 300,
+      "h": 240,
+      "pins": [
+        {
+          "id": "VCC",
+          "name": "VCC",
+          "side": "left",
+          "offset": 60,
+          "voltage": "3.3V",
+          "role": "VCC",
+          "electrical": {
+            "type": "power_in",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "GND",
+          "name": "GND",
+          "side": "left",
+          "offset": 105,
+          "voltage": "0V",
+          "role": "GND",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "AD0",
+          "name": "AD0",
+          "side": "left",
+          "offset": 150,
+          "voltage": "0-3.3V",
+          "role": "AD0",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "SCL",
+          "name": "SCL",
+          "side": "right",
+          "offset": 90,
+          "voltage": "0-3.3V",
+          "role": "SCL",
+          "electrical": {
+            "type": "open_drain",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "SDA",
+          "name": "SDA",
+          "side": "right",
+          "offset": 120,
+          "voltage": "0-3.3V",
+          "role": "SDA",
+          "electrical": {
+            "type": "open_drain",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "INT",
+          "name": "INT",
+          "side": "bottom",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "INT",
+          "electrical": {
+            "type": "passive",
+            "required": false,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "XDA",
+          "name": "XDA",
+          "side": "bottom",
+          "offset": 150,
+          "voltage": "未知",
+          "role": "XDA",
+          "electrical": {
+            "type": "passive",
+            "required": false,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "XCL",
+          "name": "XCL",
+          "side": "bottom",
+          "offset": 230,
+          "voltage": "未知",
+          "role": "XCL",
+          "electrical": {
+            "type": "passive",
+            "required": false,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_light",
+      "name": "光敏模块 AO / DO",
+      "kind": "传感器 · 使用模拟量 AO",
+      "version": 1,
+      "w": 300,
+      "h": 170,
+      "pins": [
+        {
+          "id": "VCC",
+          "name": "VCC",
+          "side": "left",
+          "offset": 70,
+          "voltage": "3.3V",
+          "role": "VCC",
+          "electrical": {
+            "type": "power_in",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "GND",
+          "name": "GND",
+          "side": "left",
+          "offset": 115,
+          "voltage": "0V",
+          "role": "GND",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "AO",
+          "name": "AO",
+          "side": "right",
+          "offset": 70,
+          "voltage": "0-3.3V",
+          "role": "AO",
+          "electrical": {
+            "type": "output",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "DO",
+          "name": "DO",
+          "side": "bottom",
+          "offset": 150,
+          "voltage": "未知",
+          "role": "DO",
+          "electrical": {
+            "type": "passive",
+            "required": false,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_encoder",
+      "name": "旋钮编码器 · A/B",
+      "kind": "无源触点式假定，需核对实物",
+      "version": 1,
+      "w": 300,
+      "h": 170,
+      "pins": [
+        {
+          "id": "COM",
+          "name": "COM",
+          "side": "left",
+          "offset": 110,
+          "voltage": "0V",
+          "role": "COM",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "A",
+          "name": "A",
+          "side": "right",
+          "offset": 80,
+          "voltage": "未知",
+          "role": "A",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "B",
+          "name": "B",
+          "side": "right",
+          "offset": 110,
+          "voltage": "未知",
+          "role": "B",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_r1",
+      "name": "R1 · 限流电阻",
+      "kind": "每颗 LED 独立一只，阻值待核对",
+      "version": 1,
+      "w": 190,
+      "h": 110,
+      "pins": [
+        {
+          "id": "IN",
+          "name": "IN",
+          "side": "left",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "IN",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "OUT",
+          "name": "OUT",
+          "side": "right",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "OUT",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_led1",
+      "name": "LED1",
+      "kind": "阳极 A / 阴极 K",
+      "version": 1,
+      "w": 210,
+      "h": 110,
+      "pins": [
+        {
+          "id": "A",
+          "name": "A",
+          "side": "left",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "A",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "K",
+          "name": "K",
+          "side": "right",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "K",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_r2",
+      "name": "R2 · 限流电阻",
+      "kind": "每颗 LED 独立一只，阻值待核对",
+      "version": 1,
+      "w": 190,
+      "h": 110,
+      "pins": [
+        {
+          "id": "IN",
+          "name": "IN",
+          "side": "left",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "IN",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "OUT",
+          "name": "OUT",
+          "side": "right",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "OUT",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_led2",
+      "name": "LED2",
+      "kind": "阳极 A / 阴极 K",
+      "version": 1,
+      "w": 210,
+      "h": 110,
+      "pins": [
+        {
+          "id": "A",
+          "name": "A",
+          "side": "left",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "A",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "K",
+          "name": "K",
+          "side": "right",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "K",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_buzzer",
+      "name": "MH-FMD 蜂鸣器",
+      "kind": "低电平触发 · VCC 暂不接",
+      "version": 1,
+      "w": 290,
+      "h": 180,
+      "pins": [
+        {
+          "id": "I/O",
+          "name": "I/O",
+          "side": "left",
+          "offset": 80,
+          "voltage": "未知",
+          "role": "3.3V 控制兼容性待确认",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "VCC",
+          "name": "VCC",
+          "side": "right",
+          "offset": 75,
+          "voltage": "未知",
+          "role": "供电电压未确认，确认前不连接",
+          "electrical": {
+            "type": "power_in",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "GND",
+          "name": "GND",
+          "side": "right",
+          "offset": 130,
+          "voltage": "0V",
+          "role": "GND",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_servo",
+      "name": "尾巴舵机 · 型号待核对",
+      "kind": "信号 PA8 · 电源独立 5V",
+      "version": 1,
+      "w": 290,
+      "h": 160,
+      "pins": [
+        {
+          "id": "SIG",
+          "name": "SIG",
+          "side": "left",
+          "offset": 60,
+          "voltage": "未知",
+          "role": "需确认接收 3.3V PWM",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "+",
+          "name": "+",
+          "side": "right",
+          "offset": 60,
+          "voltage": "5V",
+          "role": "+",
+          "electrical": {
+            "type": "power_in",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "-",
+          "name": "-",
+          "side": "right",
+          "offset": 110,
+          "voltage": "0V",
+          "role": "-",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_uart",
+      "name": "USB 转 TTL 串口",
+      "kind": "115200 8N1 · 需确认 3.3V 电平",
+      "version": 1,
+      "w": 290,
+      "h": 180,
+      "pins": [
+        {
+          "id": "RXD",
+          "name": "RXD",
+          "side": "left",
+          "offset": 80,
+          "voltage": "未知",
+          "role": "RXD",
+          "electrical": {
+            "type": "input",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "TXD",
+          "name": "TXD",
+          "side": "left",
+          "offset": 110,
+          "voltage": "未知",
+          "role": "TXD",
+          "electrical": {
+            "type": "output",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "GND",
+          "name": "GND",
+          "side": "right",
+          "offset": 130,
+          "voltage": "0V",
+          "role": "GND",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "VCC",
+          "name": "VCC",
+          "side": "bottom",
+          "offset": 145,
+          "voltage": "未知",
+          "role": "VCC",
+          "electrical": {
+            "type": "passive",
+            "required": false,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_stlink",
+      "name": "ST-Link · SWD",
+      "kind": "使用开发板专用下载接口",
+      "version": 1,
+      "w": 290,
+      "h": 240,
+      "pins": [
+        {
+          "id": "SWDIO",
+          "name": "SWDIO",
+          "side": "left",
+          "offset": 100,
+          "voltage": "0-3.3V",
+          "role": "SWDIO",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "SWCLK",
+          "name": "SWCLK",
+          "side": "left",
+          "offset": 130,
+          "voltage": "0-3.3V",
+          "role": "SWCLK",
+          "electrical": {
+            "type": "output",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "GND",
+          "name": "GND",
+          "side": "right",
+          "offset": 160,
+          "voltage": "0V",
+          "role": "GND",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "VTref?",
+          "name": "VTref?",
+          "side": "bottom",
+          "offset": 70,
+          "voltage": "未知",
+          "role": "VTref?",
+          "electrical": {
+            "type": "passive",
+            "required": false,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "NRST?",
+          "name": "NRST?",
+          "side": "bottom",
+          "offset": 210,
+          "voltage": "未知",
+          "role": "NRST?",
+          "electrical": {
+            "type": "passive",
+            "required": false,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_power3",
+      "name": "3.3V 逻辑电源",
+      "kind": "设计电压 · 来源/容量待确认",
+      "version": 1,
+      "w": 300,
+      "h": 150,
+      "pins": [
+        {
+          "id": "+",
+          "name": "+",
+          "side": "right",
+          "offset": 65,
+          "voltage": "3.3V",
+          "role": "+",
+          "electrical": {
+            "type": "power_out",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "-",
+          "name": "-",
+          "side": "right",
+          "offset": 115,
+          "voltage": "0V",
+          "role": "-",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_power5",
+      "name": "舵机独立 5V 电源",
+      "kind": "输出能力、极性须实测确认",
+      "version": 1,
+      "w": 300,
+      "h": 160,
+      "pins": [
+        {
+          "id": "+",
+          "name": "+",
+          "side": "left",
+          "offset": 60,
+          "voltage": "5V",
+          "role": "+",
+          "electrical": {
+            "type": "power_out",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "-",
+          "name": "-",
+          "side": "left",
+          "offset": 110,
+          "voltage": "0V",
+          "role": "-",
+          "electrical": {
+            "type": "gnd",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_key1",
+      "name": "KEY1 · PB12",
+      "kind": "两个独立触点，按下导通",
+      "version": 1,
+      "w": 250,
+      "h": 140,
+      "pins": [
+        {
+          "id": "触点1",
+          "name": "触点1",
+          "side": "top",
+          "offset": 125,
+          "voltage": "未知",
+          "role": "触点1",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "触点2",
+          "name": "触点2",
+          "side": "bottom",
+          "offset": 125,
+          "voltage": "0V",
+          "role": "触点2",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_key2",
+      "name": "KEY2 · PB15",
+      "kind": "两个独立触点，按下导通",
+      "version": 1,
+      "w": 250,
+      "h": 140,
+      "pins": [
+        {
+          "id": "触点1",
+          "name": "触点1",
+          "side": "top",
+          "offset": 125,
+          "voltage": "未知",
+          "role": "触点1",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "触点2",
+          "name": "触点2",
+          "side": "bottom",
+          "offset": 125,
+          "voltage": "0V",
+          "role": "触点2",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_key3",
+      "name": "KEY3 · PB8",
+      "kind": "两个独立触点，按下导通",
+      "version": 1,
+      "w": 250,
+      "h": 140,
+      "pins": [
+        {
+          "id": "触点1",
+          "name": "触点1",
+          "side": "top",
+          "offset": 125,
+          "voltage": "未知",
+          "role": "触点1",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "触点2",
+          "name": "触点2",
+          "side": "bottom",
+          "offset": 125,
+          "voltage": "0V",
+          "role": "触点2",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tpl_key4",
+      "name": "KEY4 · PB9",
+      "kind": "两个独立触点，按下导通",
+      "version": 1,
+      "w": 250,
+      "h": 140,
+      "pins": [
+        {
+          "id": "触点1",
+          "name": "触点1",
+          "side": "top",
+          "offset": 125,
+          "voltage": "未知",
+          "role": "触点1",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        },
+        {
+          "id": "触点2",
+          "name": "触点2",
+          "side": "bottom",
+          "offset": 125,
+          "voltage": "0V",
+          "role": "触点2",
+          "electrical": {
+            "type": "passive",
+            "required": true,
+            "pullup": "unknown"
+          }
+        }
+      ]
+    }
+  ]
+}

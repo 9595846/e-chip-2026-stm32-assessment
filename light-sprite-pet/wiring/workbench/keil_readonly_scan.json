@@ -1,0 +1,2316 @@
+{
+  "project": "Project.uvprojx",
+  "root": "light-sprite-pet/",
+  "target": "Stage6",
+  "device": "STM32F103C8",
+  "defines": "STM32F10X_MD,USE_STDPERIPH_DRIVER,APP_STAGE=6",
+  "files_read": 38,
+  "evidence": [
+    {
+      "file": "Hardware/board.c",
+      "line": 217,
+      "pin": "PA9",
+      "mode": "GPIO_Mode_AF_PP",
+      "expression": "GPIO_Pin_9",
+      "symbols": [
+        "GPIO_Pin_9"
+      ],
+      "assignment_line": 214,
+      "code": "GPIO_Init(GPIOA, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_9;",
+      "macros": [],
+      "conditional": false,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/board.c",
+      "line": 220,
+      "pin": "PA10",
+      "mode": "GPIO_Mode_IN_FLOATING",
+      "expression": "GPIO_Pin_10",
+      "symbols": [
+        "GPIO_Pin_10"
+      ],
+      "assignment_line": 218,
+      "code": "GPIO_Init(GPIOA, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_10;",
+      "macros": [],
+      "conditional": false,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/board.c",
+      "line": 247,
+      "pin": "PB8",
+      "mode": "GPIO_Mode_IPU",
+      "expression": "GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_12 | GPIO_Pin_15",
+      "symbols": [
+        "GPIO_Pin_8"
+      ],
+      "assignment_line": 244,
+      "code": "GPIO_Init(GPIOB, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_12 | GPIO_Pin_15;",
+      "macros": [],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/board.c",
+      "line": 247,
+      "pin": "PB9",
+      "mode": "GPIO_Mode_IPU",
+      "expression": "GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_12 | GPIO_Pin_15",
+      "symbols": [
+        "GPIO_Pin_9"
+      ],
+      "assignment_line": 244,
+      "code": "GPIO_Init(GPIOB, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_12 | GPIO_Pin_15;",
+      "macros": [],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/board.c",
+      "line": 247,
+      "pin": "PB12",
+      "mode": "GPIO_Mode_IPU",
+      "expression": "GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_12 | GPIO_Pin_15",
+      "symbols": [
+        "GPIO_Pin_12"
+      ],
+      "assignment_line": 244,
+      "code": "GPIO_Init(GPIOB, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_12 | GPIO_Pin_15;",
+      "macros": [],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/board.c",
+      "line": 247,
+      "pin": "PB15",
+      "mode": "GPIO_Mode_IPU",
+      "expression": "GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_12 | GPIO_Pin_15",
+      "symbols": [
+        "GPIO_Pin_15"
+      ],
+      "assignment_line": 244,
+      "code": "GPIO_Init(GPIOB, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_12 | GPIO_Pin_15;",
+      "macros": [],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/board.c",
+      "line": 251,
+      "pin": "PA6",
+      "mode": "GPIO_Mode_IPU",
+      "expression": "GPIO_Pin_6 | GPIO_Pin_7",
+      "symbols": [
+        "GPIO_Pin_6"
+      ],
+      "assignment_line": 249,
+      "code": "GPIO_Init(GPIOA, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;",
+      "macros": [],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/board.c",
+      "line": 251,
+      "pin": "PA7",
+      "mode": "GPIO_Mode_IPU",
+      "expression": "GPIO_Pin_6 | GPIO_Pin_7",
+      "symbols": [
+        "GPIO_Pin_7"
+      ],
+      "assignment_line": 249,
+      "code": "GPIO_Init(GPIOA, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;",
+      "macros": [],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/board.c",
+      "line": 277,
+      "pin": "PA1",
+      "mode": "GPIO_Mode_AIN",
+      "expression": "GPIO_Pin_1",
+      "symbols": [
+        "GPIO_Pin_1"
+      ],
+      "assignment_line": 275,
+      "code": "GPIO_Init(GPIOA, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_1;",
+      "macros": [],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/bus.c",
+      "line": 34,
+      "pin": "PB6",
+      "mode": "GPIO_Mode_Out_OD",
+      "expression": "GPIO_Pin_6 | GPIO_Pin_7",
+      "symbols": [
+        "GPIO_Pin_6"
+      ],
+      "assignment_line": 31,
+      "code": "GPIO_Init(GPIOB, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;",
+      "macros": [],
+      "conditional": false,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/bus.c",
+      "line": 34,
+      "pin": "PB7",
+      "mode": "GPIO_Mode_Out_OD",
+      "expression": "GPIO_Pin_6 | GPIO_Pin_7",
+      "symbols": [
+        "GPIO_Pin_7"
+      ],
+      "assignment_line": 31,
+      "code": "GPIO_Init(GPIOB, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;",
+      "macros": [],
+      "conditional": false,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/mpu_soft_i2c.c",
+      "line": 87,
+      "pin": "PB10",
+      "mode": "GPIO_Mode_Out_OD",
+      "expression": "MPU_SCL_PIN | MPU_SDA_PIN",
+      "symbols": [
+        "MPU_SCL_PIN"
+      ],
+      "assignment_line": 84,
+      "code": "GPIO_Init(MPU_GPIO, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = MPU_SCL_PIN | MPU_SDA_PIN;",
+      "macros": [
+        {
+          "symbol": "MPU_SCL_PIN",
+          "line": 9,
+          "code": "#define MPU_SCL_PIN GPIO_Pin_10"
+        },
+        {
+          "symbol": "MPU_SDA_PIN",
+          "line": 10,
+          "code": "#define MPU_SDA_PIN GPIO_Pin_11"
+        }
+      ],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/mpu_soft_i2c.c",
+      "line": 87,
+      "pin": "PB11",
+      "mode": "GPIO_Mode_Out_OD",
+      "expression": "MPU_SCL_PIN | MPU_SDA_PIN",
+      "symbols": [
+        "MPU_SDA_PIN"
+      ],
+      "assignment_line": 84,
+      "code": "GPIO_Init(MPU_GPIO, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = MPU_SCL_PIN | MPU_SDA_PIN;",
+      "macros": [
+        {
+          "symbol": "MPU_SCL_PIN",
+          "line": 9,
+          "code": "#define MPU_SCL_PIN GPIO_Pin_10"
+        },
+        {
+          "symbol": "MPU_SDA_PIN",
+          "line": 10,
+          "code": "#define MPU_SDA_PIN GPIO_Pin_11"
+        }
+      ],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    },
+    {
+      "file": "Hardware/servo.c",
+      "line": 36,
+      "pin": "PA8",
+      "mode": "GPIO_Mode_AF_PP",
+      "expression": "GPIO_Pin_8",
+      "symbols": [
+        "GPIO_Pin_8"
+      ],
+      "assignment_line": 33,
+      "code": "GPIO_Init(GPIOA, &gpio);",
+      "assignment_code": "gpio.GPIO_Pin = GPIO_Pin_8;",
+      "macros": [],
+      "conditional": true,
+      "confidence": "静态候选，未验证运行路径"
+    }
+  ],
+  "unresolved": [
+    {
+      "file": "Hardware/board.c",
+      "line": 38,
+      "reason": "端口或针脚表达式无法静态确定：pins",
+      "code": "GPIO_Init(port, &gpio);"
+    },
+    {
+      "file": "Hardware/bus.c",
+      "line": 51,
+      "reason": "初始化结构体针脚无法确定（可能跨作用域、指针或动态赋值）",
+      "code": "GPIO_Init(GPIOB, &gpio);"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 469,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpreg = AFIO->EVCR;"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 474,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "AFIO->EVCR = tmpreg;"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 549,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState)"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 559,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpreg = AFIO->MAPR2;"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 563,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpreg = AFIO->MAPR;"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 572,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "AFIO->MAPR &= DBGAFR_SWJCFG_MASK;"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 593,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "AFIO->MAPR2 = tmpreg;"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 597,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "AFIO->MAPR = tmpreg;"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 617,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "AFIO->EXTICR[GPIO_PinSource >> 0x02] &= ~tmp;"
+    },
+    {
+      "file": "Library/stm32f10x_gpio.c",
+      "line": 618,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "AFIO->EXTICR[GPIO_PinSource >> 0x02] |= (((uint32_t)GPIO_PortSource) << (0x04 * (GPIO_PinSource & (uint8_t)0x03)));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 232,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_COUNTER_MODE(TIM_TimeBaseInitStruct->TIM_CounterMode));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 233,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_CKD_DIV(TIM_TimeBaseInitStruct->TIM_ClockDivision));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 235,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr1 = TIMx->CR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 242,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr1 |= (uint32_t)TIM_TimeBaseInitStruct->TIM_CounterMode;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 249,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr1 |= (uint32_t)TIM_TimeBaseInitStruct->TIM_ClockDivision;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 252,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 = tmpcr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 255,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->ARR = TIM_TimeBaseInitStruct->TIM_Period ;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 258,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->PSC = TIM_TimeBaseInitStruct->TIM_Prescaler;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 263,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->RCR = TIM_TimeBaseInitStruct->TIM_RepetitionCounter;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 268,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->EGR = TIM_PSCReloadMode_Immediate;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 285,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OC_MODE(TIM_OCInitStruct->TIM_OCMode));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 286,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OUTPUT_STATE(TIM_OCInitStruct->TIM_OutputState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 287,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OC_POLARITY(TIM_OCInitStruct->TIM_OCPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 289,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t)(~(uint16_t)TIM_CCER_CC1E);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 291,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 293,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 =  TIMx->CR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 296,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmrx = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 303,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmrx |= TIM_OCInitStruct->TIM_OCMode;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 308,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= TIM_OCInitStruct->TIM_OCPolarity;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 311,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= TIM_OCInitStruct->TIM_OutputState;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 316,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OUTPUTN_STATE(TIM_OCInitStruct->TIM_OutputNState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 317,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCN_POLARITY(TIM_OCInitStruct->TIM_OCNPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 318,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCNIDLE_STATE(TIM_OCInitStruct->TIM_OCNIdleState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 319,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCIDLE_STATE(TIM_OCInitStruct->TIM_OCIdleState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 324,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= TIM_OCInitStruct->TIM_OCNPolarity;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 329,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= TIM_OCInitStruct->TIM_OutputNState;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 336,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 |= TIM_OCInitStruct->TIM_OCIdleState;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 338,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 |= TIM_OCInitStruct->TIM_OCNIdleState;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 341,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 = tmpcr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 344,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmrx;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 347,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCR1 = TIM_OCInitStruct->TIM_Pulse;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 350,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 368,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OC_MODE(TIM_OCInitStruct->TIM_OCMode));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 369,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OUTPUT_STATE(TIM_OCInitStruct->TIM_OutputState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 370,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OC_POLARITY(TIM_OCInitStruct->TIM_OCPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 372,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t)(~((uint16_t)TIM_CCER_CC2E));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 375,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 377,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 =  TIMx->CR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 380,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmrx = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 387,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmrx |= (uint16_t)(TIM_OCInitStruct->TIM_OCMode << 8);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 392,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OCPolarity << 4);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 395,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OutputState << 4);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 399,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OUTPUTN_STATE(TIM_OCInitStruct->TIM_OutputNState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 400,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCN_POLARITY(TIM_OCInitStruct->TIM_OCNPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 401,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCNIDLE_STATE(TIM_OCInitStruct->TIM_OCNIdleState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 402,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCIDLE_STATE(TIM_OCInitStruct->TIM_OCIdleState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 407,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OCNPolarity << 4);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 412,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OutputNState << 4);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 419,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 |= (uint16_t)(TIM_OCInitStruct->TIM_OCIdleState << 2);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 421,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 |= (uint16_t)(TIM_OCInitStruct->TIM_OCNIdleState << 2);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 424,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 = tmpcr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 427,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmrx;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 430,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCR2 = TIM_OCInitStruct->TIM_Pulse;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 433,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 450,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OC_MODE(TIM_OCInitStruct->TIM_OCMode));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 451,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OUTPUT_STATE(TIM_OCInitStruct->TIM_OutputState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 452,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OC_POLARITY(TIM_OCInitStruct->TIM_OCPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 454,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t)(~((uint16_t)TIM_CCER_CC3E));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 457,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 459,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 =  TIMx->CR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 462,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmrx = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 468,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmrx |= TIM_OCInitStruct->TIM_OCMode;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 473,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OCPolarity << 8);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 476,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OutputState << 8);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 480,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OUTPUTN_STATE(TIM_OCInitStruct->TIM_OutputNState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 481,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCN_POLARITY(TIM_OCInitStruct->TIM_OCNPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 482,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCNIDLE_STATE(TIM_OCInitStruct->TIM_OCNIdleState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 483,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCIDLE_STATE(TIM_OCInitStruct->TIM_OCIdleState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 488,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OCNPolarity << 8);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 493,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OutputNState << 8);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 498,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 |= (uint16_t)(TIM_OCInitStruct->TIM_OCIdleState << 4);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 500,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 |= (uint16_t)(TIM_OCInitStruct->TIM_OCNIdleState << 4);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 503,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 = tmpcr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 506,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmrx;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 509,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCR3 = TIM_OCInitStruct->TIM_Pulse;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 512,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 529,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OC_MODE(TIM_OCInitStruct->TIM_OCMode));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 530,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OUTPUT_STATE(TIM_OCInitStruct->TIM_OutputState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 531,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OC_POLARITY(TIM_OCInitStruct->TIM_OCPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 533,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t)(~((uint16_t)TIM_CCER_CC4E));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 536,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 538,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 =  TIMx->CR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 541,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmrx = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 548,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmrx |= (uint16_t)(TIM_OCInitStruct->TIM_OCMode << 8);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 553,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OCPolarity << 12);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 556,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer |= (uint16_t)(TIM_OCInitStruct->TIM_OutputState << 12);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 560,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OCIDLE_STATE(TIM_OCInitStruct->TIM_OCIdleState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 564,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr2 |= (uint16_t)(TIM_OCInitStruct->TIM_OCIdleState << 6);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 567,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 = tmpcr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 570,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmrx;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 573,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCR4 = TIM_OCInitStruct->TIM_Pulse;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 576,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 590,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_CHANNEL(TIM_ICInitStruct->TIM_Channel));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 591,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_IC_SELECTION(TIM_ICInitStruct->TIM_ICSelection));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 592,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_IC_PRESCALER(TIM_ICInitStruct->TIM_ICPrescaler));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 593,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_IC_FILTER(TIM_ICInitStruct->TIM_ICFilter));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 598,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_IC_POLARITY(TIM_ICInitStruct->TIM_ICPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 602,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_IC_POLARITY_LITE(TIM_ICInitStruct->TIM_ICPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 604,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "if (TIM_ICInitStruct->TIM_Channel == TIM_Channel_1)"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 608,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TI1_Config(TIMx, TIM_ICInitStruct->TIM_ICPolarity,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 609,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICSelection,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 610,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICFilter);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 612,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_SetIC1Prescaler(TIMx, TIM_ICInitStruct->TIM_ICPrescaler);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 614,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "else if (TIM_ICInitStruct->TIM_Channel == TIM_Channel_2)"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 618,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TI2_Config(TIMx, TIM_ICInitStruct->TIM_ICPolarity,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 619,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICSelection,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 620,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICFilter);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 622,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_SetIC2Prescaler(TIMx, TIM_ICInitStruct->TIM_ICPrescaler);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 624,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "else if (TIM_ICInitStruct->TIM_Channel == TIM_Channel_3)"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 628,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TI3_Config(TIMx,  TIM_ICInitStruct->TIM_ICPolarity,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 629,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICSelection,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 630,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICFilter);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 632,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_SetIC3Prescaler(TIMx, TIM_ICInitStruct->TIM_ICPrescaler);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 638,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TI4_Config(TIMx, TIM_ICInitStruct->TIM_ICPolarity,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 639,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICSelection,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 640,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICFilter);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 642,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_SetIC4Prescaler(TIMx, TIM_ICInitStruct->TIM_ICPrescaler);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 661,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "if (TIM_ICInitStruct->TIM_ICPolarity == TIM_ICPolarity_Rising)"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 670,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "if (TIM_ICInitStruct->TIM_ICSelection == TIM_ICSelection_DirectTI)"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 678,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "if (TIM_ICInitStruct->TIM_Channel == TIM_Channel_1)"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 681,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TI1_Config(TIMx, TIM_ICInitStruct->TIM_ICPolarity, TIM_ICInitStruct->TIM_ICSelection,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 682,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICFilter);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 684,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_SetIC1Prescaler(TIMx, TIM_ICInitStruct->TIM_ICPrescaler);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 686,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TI2_Config(TIMx, icoppositepolarity, icoppositeselection, TIM_ICInitStruct->TIM_ICFilter);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 688,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_SetIC2Prescaler(TIMx, TIM_ICInitStruct->TIM_ICPrescaler);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 693,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TI2_Config(TIMx, TIM_ICInitStruct->TIM_ICPolarity, TIM_ICInitStruct->TIM_ICSelection,"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 694,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICFilter);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 696,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_SetIC2Prescaler(TIMx, TIM_ICInitStruct->TIM_ICPrescaler);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 698,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TI1_Config(TIMx, icoppositepolarity, icoppositeselection, TIM_ICInitStruct->TIM_ICFilter);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 700,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_SetIC1Prescaler(TIMx, TIM_ICInitStruct->TIM_ICPrescaler);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 716,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OSSR_STATE(TIM_BDTRInitStruct->TIM_OSSRState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 717,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_OSSI_STATE(TIM_BDTRInitStruct->TIM_OSSIState));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 718,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_LOCK_LEVEL(TIM_BDTRInitStruct->TIM_LOCKLevel));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 719,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_BREAK_STATE(TIM_BDTRInitStruct->TIM_Break));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 720,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_BREAK_POLARITY(TIM_BDTRInitStruct->TIM_BreakPolarity));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 721,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "assert_param(IS_TIM_AUTOMATIC_OUTPUT_STATE(TIM_BDTRInitStruct->TIM_AutomaticOutput));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 724,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->BDTR = (uint32_t)TIM_BDTRInitStruct->TIM_OSSRState | TIM_BDTRInitStruct->TIM_OSSIState |"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 725,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_LOCKLevel | TIM_BDTRInitStruct->TIM_DeadTime |"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 726,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_Break | TIM_BDTRInitStruct->TIM_BreakPolarity |"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 727,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_AutomaticOutput;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 739,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_TimeBaseInitStruct->TIM_Period = 0xFFFF;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 740,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_TimeBaseInitStruct->TIM_Prescaler = 0x0000;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 741,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_TimeBaseInitStruct->TIM_ClockDivision = TIM_CKD_DIV1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 742,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_TimeBaseInitStruct->TIM_CounterMode = TIM_CounterMode_Up;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 743,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_TimeBaseInitStruct->TIM_RepetitionCounter = 0x0000;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 755,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_OCInitStruct->TIM_OCMode = TIM_OCMode_Timing;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 756,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_OCInitStruct->TIM_OutputState = TIM_OutputState_Disable;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 757,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_OCInitStruct->TIM_OutputNState = TIM_OutputNState_Disable;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 758,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_OCInitStruct->TIM_Pulse = 0x0000;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 759,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_OCInitStruct->TIM_OCPolarity = TIM_OCPolarity_High;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 760,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_OCInitStruct->TIM_OCNPolarity = TIM_OCPolarity_High;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 761,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_OCInitStruct->TIM_OCIdleState = TIM_OCIdleState_Reset;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 762,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_OCInitStruct->TIM_OCNIdleState = TIM_OCNIdleState_Reset;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 774,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_Channel = TIM_Channel_1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 775,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICPolarity = TIM_ICPolarity_Rising;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 776,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICSelection = TIM_ICSelection_DirectTI;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 777,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICPrescaler = TIM_ICPSC_DIV1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 778,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_ICInitStruct->TIM_ICFilter = 0x00;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 790,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_OSSRState = TIM_OSSRState_Disable;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 791,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_OSSIState = TIM_OSSIState_Disable;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 792,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_LOCKLevel = TIM_LOCKLevel_OFF;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 793,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_DeadTime = 0x00;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 794,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_Break = TIM_Break_Disable;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 795,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_BreakPolarity = TIM_BreakPolarity_Low;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 796,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIM_BDTRInitStruct->TIM_AutomaticOutput = TIM_AutomaticOutput_Disable;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 815,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 |= TIM_CR1_CEN;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 820,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 &= (uint16_t)(~((uint16_t)TIM_CR1_CEN));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 839,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->BDTR |= TIM_BDTR_MOE;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 844,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->BDTR &= (uint16_t)(~((uint16_t)TIM_BDTR_MOE));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 882,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->DIER |= TIM_IT;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 887,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->DIER &= (uint16_t)~TIM_IT;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 916,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->EGR = TIM_EventSource;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 944,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->DCR = TIM_DMABase | TIM_DMABurstLength;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 974,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->DIER |= TIM_DMASource;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 979,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->DIER &= (uint16_t)~TIM_DMASource;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 994,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR &=  (uint16_t)(~((uint16_t)TIM_SMCR_SMS));"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1016,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR |= TIM_SlaveMode_External1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1055,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR |= TIM_SlaveMode_External1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1088,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpsmcr = TIMx->SMCR;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1097,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR = tmpsmcr;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1128,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR |= TIM_SMCR_ECE;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1157,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpsmcr = TIMx->SMCR;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1163,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR = tmpsmcr;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1182,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->PSC = Prescaler;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1184,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->EGR = TIM_PSCReloadMode;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1205,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpcr1 = TIMx->CR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1211,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 = tmpcr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1236,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpsmcr = TIMx->SMCR;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1242,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR = tmpsmcr;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1278,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpsmcr = TIMx->SMCR;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1281,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1284,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1299,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR = tmpsmcr;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1301,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1303,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1321,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1327,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1345,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1351,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1369,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1375,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1393,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1399,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1417,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 |= TIM_CR1_ARPE;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1422,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 &= (uint16_t)~((uint16_t)TIM_CR1_ARPE);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1441,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 |= TIM_CR2_CCUS;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1446,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 &= (uint16_t)~((uint16_t)TIM_CR2_CCUS);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1466,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 |= TIM_CR2_CCDS;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1471,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 &= (uint16_t)~((uint16_t)TIM_CR2_CCDS);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1491,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 |= TIM_CR2_CCPC;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1496,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 &= (uint16_t)~((uint16_t)TIM_CR2_CCPC);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1515,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1521,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1540,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1546,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1564,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1570,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1588,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1594,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1613,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1619,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1639,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1645,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1664,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1670,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1689,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1695,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1714,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1721,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1739,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1745,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1763,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1769,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1787,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1793,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1811,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1816,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1835,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1840,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1858,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1863,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1882,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1887,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1905,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1910,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1930,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1935,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1953,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1958,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1986,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t)~ tmp;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 1989,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER |=  (uint16_t)(TIM_CCx << TIM_Channel);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2016,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t) ~tmp;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2019,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER |=  (uint16_t)(TIM_CCxN << TIM_Channel);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2061,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t) ~tmp1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2100,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 |= TIM_CR1_UDIS;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2105,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 &= (uint16_t)~((uint16_t)TIM_CR1_UDIS);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2128,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 |= TIM_CR1_URS;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2133,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 &= (uint16_t)~((uint16_t)TIM_CR1_URS);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2152,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 |= TIM_CR2_TI1S;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2157,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 &= (uint16_t)~((uint16_t)TIM_CR2_TI1S);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2176,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 &= (uint16_t)~((uint16_t)TIM_CR1_OPM);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2178,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 |= TIM_OPMode;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2208,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 &= (uint16_t)~((uint16_t)TIM_CR2_MMS);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2210,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR2 |=  TIM_TRGOSource;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2231,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR &= (uint16_t)~((uint16_t)TIM_SMCR_SMS);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2233,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR |= TIM_SlaveMode;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2252,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR &= (uint16_t)~((uint16_t)TIM_SMCR_MSM);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2255,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SMCR |= TIM_MasterSlaveMode;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2269,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CNT = Counter;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2283,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->ARR = Autoreload;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2297,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCR1 = Compare1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2311,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCR2 = Compare2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2325,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCR3 = Compare3;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2339,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCR4 = Compare4;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2359,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 &= (uint16_t)~((uint16_t)TIM_CCMR1_IC1PSC);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2361,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 |= TIM_ICPSC;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2381,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 &= (uint16_t)~((uint16_t)TIM_CCMR1_IC2PSC);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2383,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 |= (uint16_t)(TIM_ICPSC << 8);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2403,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 &= (uint16_t)~((uint16_t)TIM_CCMR2_IC3PSC);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2405,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 |= TIM_ICPSC;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2425,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 &= (uint16_t)~((uint16_t)TIM_CCMR2_IC4PSC);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2427,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 |= (uint16_t)(TIM_ICPSC << 8);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2447,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 &= (uint16_t)~((uint16_t)TIM_CR1_CKD);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2449,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CR1 |= TIM_CKD;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2462,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "return TIMx->CCR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2475,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "return TIMx->CCR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2488,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "return TIMx->CCR3;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2501,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "return TIMx->CCR4;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2514,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "return TIMx->CNT;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2527,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "return TIMx->PSC;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2563,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "if ((TIMx->SR & TIM_FLAG) != (uint16_t)RESET)"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2607,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SR = (uint16_t)~TIM_FLAG;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2640,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "itstatus = TIMx->SR & TIM_IT;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2642,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "itenable = TIMx->DIER & TIM_IT;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2682,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->SR = (uint16_t)~TIM_IT;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2706,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t)~((uint16_t)TIM_CCER_CC1E);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2707,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2708,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2728,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2729,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2753,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t)~((uint16_t)TIM_CCER_CC2E);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2754,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr1 = TIMx->CCMR1;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2755,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2777,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR1 = tmpccmr1 ;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2778,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2802,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t)~((uint16_t)TIM_CCER_CC3E);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2803,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2804,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2825,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2826,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2851,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER &= (uint16_t)~((uint16_t)TIM_CCER_CC4E);"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2852,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccmr2 = TIMx->CCMR2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2853,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "tmpccer = TIMx->CCER;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2874,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCMR2 = tmpccmr2;"
+    },
+    {
+      "file": "Library/stm32f10x_tim.c",
+      "line": 2875,
+      "reason": "寄存器/重映射访问仅列证据，不据此推断最终针脚用途",
+      "code": "TIMx->CCER = tmpccer;"
+    }
+  ],
+  "truncated": false,
+  "skipped": [],
+  "fingerprints": {
+    "Project.uvprojx": "e2c5931998ef4962ff95fdb32ff2b39b670ed0ec24cbcbd84e778421e69e8070",
+    "Hardware/board.c": "abc64ddd2b707b32a3ffd27f05a26941179c88180154ef2844c66284ddb74adc",
+    "Hardware/bus.c": "686cf39bd32dc96e48079813c58fc4a31d8dad7497f949423065226a906b2dc8",
+    "Hardware/mpu_soft_i2c.c": "73109b78d708b373ee97d93d6366d54f7ad3ccc6ad9dfd6e6db9dea6b19df1b7",
+    "Hardware/mpu_soft_i2c.h": "159849bc3e7c2434d3374ae1b17f5283be7b7731307d9f009b659cd905dc18d5",
+    "Hardware/oled.c": "93a856ff3d1997ead90fa57f4ea62ee17b072d14f810d0c358a1545acee311d5",
+    "Hardware/oled.h": "e888fcafafbd6430fea817cee85dc97838404be585427c9c11b5e9adcff15e08",
+    "Hardware/servo.c": "a5908eca2400e303a924375806581c455aecd9fda9b26178cc81fbcc716f33d4",
+    "Hardware/servo.h": "d0d64d4e5f1938adfa2155dc32809eebfe811441e7a8ea33b4726645bf9ca548",
+    "Hardware/zh_glyphs.h": "0d057641810832e97e552ba5a1c4aebef29244d4f3d08b34f281e72a2e55908f",
+    "Library/misc.c": "152c632e56151b2564121c56ff359d0f041621f0da6ed101d7fd376a139a5c75",
+    "Library/misc.h": "40c918f726035dfa67a7bfadefac8e922196d7918f915a7f2db1e652625c7e41",
+    "Library/stm32f10x_flash.c": "a04fcf26499252a6b02de1cefd33c26b8802d5ff1f9bef920bbddeefdd602f43",
+    "Library/stm32f10x_flash.h": "952ca72ee4d01e49d392d55af2b146bd9f15763230660334e78ac2cad8cb8982",
+    "Library/stm32f10x_gpio.c": "8255650b583b2bab2c320e0974309a6ccf26f661e7ad1b54282c0f0e2b9a1acf",
+    "Library/stm32f10x_gpio.h": "ef945fe7b2e4a8f3bf8fa22d44274085444dec80424f91606a1467ea4e69626f",
+    "Library/stm32f10x_i2c.c": "5014d8cf824a3f3d4fca09241352e82177752ebf2a5a97a6de2fb8968e6d44c9",
+    "Library/stm32f10x_i2c.h": "08b14d416090815765a02e6fecf78cbdd3de4ad330d3bc04b2133f8f4f3f2daa",
+    "Library/stm32f10x_rcc.c": "f23bbc9b83e44e69f5dc34f072867f0087a3eb0452034ab09c363088d2354cd9",
+    "Library/stm32f10x_rcc.h": "894e140a70b0cdc94e4e96c5011def9dca5a103752783c3bb7cab538fc426f9e",
+    "Library/stm32f10x_tim.c": "bd12bf18b03b8585ac2ba6bd0e80ec39d8fd0c89307eb54f5a7be38a46894d03",
+    "Library/stm32f10x_tim.h": "dddf89f9b7134a2f15ed9cc2521589ee9a2e18c0553a6017c71b5d5b394524e5",
+    "Library/stm32f10x_usart.c": "6d7af47017b01eb260fb7699f5c483e0a8576b4c780069a99975b7c6443030dd",
+    "Library/stm32f10x_usart.h": "9d4c2067e54defd64b000076e6561726d758c872d354bed6eea66a6767c08bce",
+    "Start/core_cm3.c": "e93a7e36349e7810f328276a3fed56701e10536779f7527a8ccd140618a556b0",
+    "Start/core_cm3.h": "de4668aa9d314d05769dfb29f028e205b50577c6b2150fc6bccb34bd34179bbb",
+    "Start/stm32f10x.h": "4ee722d262c1e7d7505d7dc7eeb8ccaaf67158b51ee4bc177397cd64e74e1b3a",
+    "Start/system_stm32f10x.c": "2a33285c7d160c53774848abc68c82743d1fcfae7a589a6cebce05c6d6ac169b",
+    "Start/system_stm32f10x.h": "919dc1f5c6bbba74cb712e8ec7cf73f1988eafa9438c706526fb401a2ab4672d",
+    "User/board.h": "329c71148ba6b90756d99563adbf7822041ee87f5b26522df87fc4f3e5b57abf",
+    "User/config.h": "726fecc511ac80951845c9786773f67a784869baf8bca00706840c47470eec28",
+    "User/main.c": "74b6f5231ae5451296d1da1b933f76a8714c43d1a6bd66cde355a57b461e9331",
+    "User/pet_game.c": "99cc2f8a9da1cdeafea850dfa7ba8d8e06f7bb6be3d5067ab11b24c1fc904b06",
+    "User/pet_game.h": "6cc60b6cb24c26df33457adb7399ef1ad3e72bdf9f6f19809a176b706babda08",
+    "User/pet_ui.c": "c92177fcb967ff1d434c3ebabe440c6321f237aebf87c4ffdf49d604eb7eaf82",
+    "User/pet_ui.h": "0130d2196008037677c7198cb8e6a7fa1bdcfee2aa72fea38f2c5125e0eb481f",
+    "User/sensors.c": "401e0400723da74c27ede74597b6ac2a6cf9d533ffcc45312d79ed3c6b9f2711",
+    "User/sensors.h": "b5a3effc03ec8da737231c56f4f38c8b18e4a22079f07ef89772d495c3acd978",
+    "User/stm32f10x_conf.h": "1b60790484195fa378a3ae1fa660bf4a07a6dcea32621174fcae9e97025617d0"
+  },
+  "limitations": [
+    "仅支持标准外设库 GPIO_Init 与 HAL_GPIO_Init 的局部显式赋值。",
+    "未运行预处理器、编译器或程序；所有结果为静态候选，条件分支是否生效待确认。",
+    "仅展开同文件内单一定义的对象宏；跨头文件宏、动态代码、复用映射和寄存器写入不推断最终配置。",
+    "文件读取范围限所选工程目录；工程外源码会单列未读取。"
+  ],
+  "source_commit": "6792331efe9d0f9f09516398777d2d3947f9dce7",
+  "source_equivalence": {
+    "README.md": {
+      "remote_blob_sha": "ac3ffe282c136e0b137b8e1cd8e945c2271f07f0",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "wiring/接线与引脚表.md": {
+      "remote_blob_sha": "6c2fb0796b023076c69a1a22010402a8a3d413d1",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "User/config.h": {
+      "remote_blob_sha": "2ad07a537cf048dfd5f52d05bc59f12058d5a90b",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "Hardware/board.c": {
+      "remote_blob_sha": "ecfbede3b3918d76814b434695f7f5348db35110",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "Hardware/bus.c": {
+      "remote_blob_sha": "eab1b52e815f6cde08ebd0356e8d7c77a40e40ba",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "Hardware/mpu_soft_i2c.c": {
+      "remote_blob_sha": "01a4ad0aa7136f80ec991a704aee302089ad945e",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "Hardware/servo.c": {
+      "remote_blob_sha": "a391c549c70df0e2758af03589901e65f23caf14",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "User/sensors.c": {
+      "remote_blob_sha": "567e4fc9f766ae5ecc6a6e21145e013bf691ce74",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "docs/串口与现场验收.md": {
+      "remote_blob_sha": "4be426c686fc41de5039a33cf8dfae034b137fdd",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "Project.uvprojx": {
+      "remote_blob_sha": "91131fcecef1ffcd2b235e61bc508e5fd5ff1104",
+      "same_content_ignoring_terminal_whitespace": true
+    },
+    "User/main.c": {
+      "remote_blob_sha": "a092f1431d13b5bf96c21d386fea790d5adebd1f",
+      "same_content_ignoring_terminal_whitespace": true
+    }
+  }
+}

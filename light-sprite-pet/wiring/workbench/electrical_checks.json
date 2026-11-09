@@ -1,0 +1,179 @@
+{
+  "issues": [
+    {
+      "id": "net2-pullup",
+      "severity": "info",
+      "code": "pullup",
+      "message": "开漏网络未声明已有上拉；请确认实际模块是否带上拉及上拉电压，勿盲目并联。",
+      "net": 3,
+      "pins": [
+        {
+          "module": "mcu",
+          "pin": "PB6"
+        },
+        {
+          "module": "oled",
+          "pin": "SCL"
+        }
+      ],
+      "wires": [
+        "w26"
+      ],
+      "nodes": []
+    },
+    {
+      "id": "net3-pullup",
+      "severity": "info",
+      "code": "pullup",
+      "message": "开漏网络未声明已有上拉；请确认实际模块是否带上拉及上拉电压，勿盲目并联。",
+      "net": 4,
+      "pins": [
+        {
+          "module": "mcu",
+          "pin": "PB7"
+        },
+        {
+          "module": "oled",
+          "pin": "SDA"
+        }
+      ],
+      "wires": [
+        "w27"
+      ],
+      "nodes": []
+    },
+    {
+      "id": "net4-pullup",
+      "severity": "info",
+      "code": "pullup",
+      "message": "开漏网络未声明已有上拉；请确认实际模块是否带上拉及上拉电压，勿盲目并联。",
+      "net": 5,
+      "pins": [
+        {
+          "module": "mcu",
+          "pin": "PB10"
+        },
+        {
+          "module": "mpu",
+          "pin": "SCL"
+        }
+      ],
+      "wires": [
+        "w28"
+      ],
+      "nodes": []
+    },
+    {
+      "id": "net5-pullup",
+      "severity": "info",
+      "code": "pullup",
+      "message": "开漏网络未声明已有上拉；请确认实际模块是否带上拉及上拉电压，勿盲目并联。",
+      "net": 6,
+      "pins": [
+        {
+          "module": "mcu",
+          "pin": "PB11"
+        },
+        {
+          "module": "mpu",
+          "pin": "SDA"
+        }
+      ],
+      "wires": [
+        "w29"
+      ],
+      "nodes": []
+    },
+    {
+      "id": "net11-unknown-voltage",
+      "severity": "info",
+      "code": "unknown-voltage",
+      "message": "电压或范围未知 / 格式无效：MH-FMD 蜂鸣器 / I/O",
+      "net": 12,
+      "pins": [
+        {
+          "module": "buzzer",
+          "pin": "I/O"
+        }
+      ],
+      "wires": [
+        "w33"
+      ],
+      "nodes": []
+    },
+    {
+      "id": "net12-unknown-voltage",
+      "severity": "info",
+      "code": "unknown-voltage",
+      "message": "电压或范围未知 / 格式无效：尾巴舵机 · 型号待核对 / SIG",
+      "net": 13,
+      "pins": [
+        {
+          "module": "servo",
+          "pin": "SIG"
+        }
+      ],
+      "wires": [
+        "w34"
+      ],
+      "nodes": []
+    },
+    {
+      "id": "net13-unknown-voltage",
+      "severity": "info",
+      "code": "unknown-voltage",
+      "message": "电压或范围未知 / 格式无效：USB 转 TTL 串口 / RXD",
+      "net": 14,
+      "pins": [
+        {
+          "module": "uart",
+          "pin": "RXD"
+        }
+      ],
+      "wires": [
+        "w35"
+      ],
+      "nodes": []
+    },
+    {
+      "id": "net14-unknown-voltage",
+      "severity": "info",
+      "code": "unknown-voltage",
+      "message": "电压或范围未知 / 格式无效：USB 转 TTL 串口 / TXD",
+      "net": 15,
+      "pins": [
+        {
+          "module": "uart",
+          "pin": "TXD"
+        }
+      ],
+      "wires": [
+        "w36"
+      ],
+      "nodes": []
+    },
+    {
+      "id": "net27-unconnected-VCC",
+      "severity": "warning",
+      "code": "unconnected-VCC",
+      "message": "必接针脚未连接：MH-FMD 蜂鸣器 / VCC",
+      "net": 28,
+      "pins": [
+        {
+          "module": "buzzer",
+          "pin": "VCC"
+        }
+      ],
+      "wires": [],
+      "nodes": []
+    }
+  ],
+  "count": {
+    "error": 0,
+    "warning": 1,
+    "info": 8
+  },
+  "checkedNets": 24,
+  "scope": "仅基于已填写属性做静态检查；不验证供电容量、GPIO复用/定时器、限流阻值、真实电平、实物针序或 Keil 配置。",
+  "summary": "存在待确认的连接风险"
+}

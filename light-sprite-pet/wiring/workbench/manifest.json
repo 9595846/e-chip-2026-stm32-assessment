@@ -1,0 +1,67 @@
+{
+  "source_commit": "6792331efe9d0f9f09516398777d2d3947f9dce7",
+  "date": "2026-11-09",
+  "files": {
+    "bom.csv": {
+      "sha256": "4e48834189da1875da19e97024e760d8ff2f61a6f7b46d59f222f30e83e85690",
+      "bytes": 1607
+    },
+    "electrical_checks.json": {
+      "sha256": "063dcc28f2475b6ec63c7b9cd2cb857eab79417177dc1a7eef45622113fedde4",
+      "bytes": 4139
+    },
+    "keil_readonly_scan.json": {
+      "sha256": "7326a83b30777e29a10809f77c8ccfe4e6543b0afe83199e52cb8bbad9fbb777",
+      "bytes": 89053
+    },
+    "light_sprite_pet.wiring.json": {
+      "sha256": "f3bbdaa5f39dd1741a6adc9a9bca35e22abdf3c67d180ccc27f422cac7225d05",
+      "bytes": 84509
+    },
+    "mcp_provenance.json": {
+      "sha256": "6b620424c6cca778fed6dd74c7ff3f2a374b0ce746f1609aece5f8a8aa6202d5",
+      "bytes": 1503
+    },
+    "README.md": {
+      "sha256": "e57337aefc6cf434d485659e9f508b95446d176166d7e15559fc5422747c4bc4",
+      "bytes": 3910
+    },
+    "source_evidence.json": {
+      "sha256": "45ab2925ab5cf7b498b8c7096f1dfaea44aec0260f5d0e36004645ecde05e4b3",
+      "bytes": 13142
+    },
+    "verification.json": {
+      "sha256": "df06a7608343b069b249edcae108e70c3c231086449b55ae6cdd38fbabb8e38b",
+      "bytes": 3430
+    },
+    "wiring_overview.png": {
+      "sha256": "b2fed0ee9269372bd53efb49c03ff8c08a68e99bcf0c3921c9e75211589b6ba3",
+      "bytes": 946360
+    },
+    "wiring_overview.svg": {
+      "sha256": "ce6ad79277805828f815b769931ede0f865b7ec879c0037ee4c4bab7af7f67b0",
+      "bytes": 22406
+    },
+    "wiring_table.csv": {
+      "sha256": "7e0e7df046c59a847f1861ad2df879cdd47a3e1fc75690dc5549ff5529337622",
+      "bytes": 3354
+    },
+    "wiring_table.md": {
+      "sha256": "a2ca3208f74281cb6fc6fdfe1ef6826f6955eb99d91c831889f6dfdebdaa0f38",
+      "bytes": 4119
+    },
+    "接线说明.md": {
+      "sha256": "e409c8e374797742ff076ec7f6af276669dd34642941e50950262efb6eaecb70",
+      "bytes": 7711
+    },
+    "检查报告.md": {
+      "sha256": "6c2ee063cd78e0e50ac7bc0f0e5a332a506bf8d465be0f927c2ea7354624cbef",
+      "bytes": 8110
+    },
+    "验收清单.md": {
+      "sha256": "a0da3517da207157136853e06e69765cfa3f9a8cf78b62408bf3cd6e1b66ab38",
+      "bytes": 3758
+    }
+  },
+  "note": "不包含自身哈希；Keil 工程与固件不属于此次输出。"
+}

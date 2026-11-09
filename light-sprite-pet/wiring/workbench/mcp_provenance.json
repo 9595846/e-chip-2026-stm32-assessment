@@ -1,0 +1,35 @@
+{
+  "source_commit": "6792331efe9d0f9f09516398777d2d3947f9dce7",
+  "date": "2026-11-09",
+  "workbench_repository": "https://github.com/9595846/wiring-workbench",
+  "project_id": "project_effd03750cef4e72933da7e022f0fb59",
+  "revision": 5,
+  "mcp_tools_used": [
+    "create_project",
+    "update_project",
+    "preview_project"
+  ],
+  "checks_origin": "MCP preview_project 与本地 bridge electricalCheck 结果完全一致；一次独立 check_project 审批检查超时，未作为成功证据。",
+  "png_origin": "真实工作台网页 PNG 按钮导出；PNG 仅做无损压缩",
+  "module_count": 19,
+  "wire_count": 46,
+  "electrical_result": {
+    "error": 0,
+    "warning": 1,
+    "info": 8
+  },
+  "geometry": {
+    "crossings": 0,
+    "overlaps": 0,
+    "evidence": "工作台打开项目后 routeStats 显示；由 model.routingStats 复核"
+  },
+  "model_source_sha256": {
+    "bridge.mjs": "8941f3c8438191c1589f04bb1d0b275c317acf04ef29db78bc7078242a39b5f7",
+    "web/model.mjs": "67f24f41dd57f5b1eeb8e7805946f722c81fd499bf2e112274cdfca0099c2b85",
+    "web/checks.mjs": "19afb2bc5931426275e0c9b8668a523e98e2cc53065a9bd53685377c2b3be56f",
+    "web/persistence.mjs": "971d42035354146ee5098374fe1f6eed9a9c8253ebc6330f578d97c734c8ad0d",
+    "web/app.mjs": "1743c3206565deeed3ba66f97fa2642053d42d438cf7983ccab39081743cb71b",
+    "keil_scan.py": "1e97da5fa7eccdb4723d4b13f7fd565ccd7168c70167fe0b1fc21b875710082e"
+  },
+  "project_does_not_modify_firmware": true
+}

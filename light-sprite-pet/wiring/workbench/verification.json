@@ -1,0 +1,139 @@
+{
+  "source_commit": "6792331efe9d0f9f09516398777d2d3947f9dce7",
+  "tests": [
+    {
+      "test": "All remote source texts used match local evidence scan (terminal whitespace excluded)",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "Stage6 selected, APP_STAGE=6",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PB6 → oled:SCL",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PB7 → oled:SDA",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PB10 → mpu:SCL",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PB11 → mpu:SDA",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PA1 → light:AO",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PA6 → encoder:A",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PA7 → encoder:B",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PB14 → buzzer:I/O",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PA8 → servo:SIG",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PA9 → uart:RXD",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PA10 → uart:TXD",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PA13 → stlink:SWDIO",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PA14 → stlink:SWCLK",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PB12 → key1:触点1",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PB15 → key2:触点1",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PB8 → key3:触点1",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "PB9 → key4:触点1",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "3.3V / 5V / GND are distinct networks",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "Servo ground and MCU ground are joined",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "Both LED chains have separate series resistors",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "Buzzer VCC intentionally unconnected pending rating",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "TTL VCC intentionally unconnected",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "No electrical error in declared metadata",
+      "result": "PASS",
+      "scope": "document_static"
+    },
+    {
+      "test": "Missing buzzer supply remains visible warning",
+      "result": "PASS",
+      "scope": "document_static"
+    }
+  ],
+  "keil_build_performed": false,
+  "hardware_test_performed": false,
+  "firmware_modified": false,
+  "scope": "文件结构、网络拓扑、源码文本和静态电气属性检查；不执行模拟电路。"
+}

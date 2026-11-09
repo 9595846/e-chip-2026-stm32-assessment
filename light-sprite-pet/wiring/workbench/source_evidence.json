@@ -1,0 +1,513 @@
+{
+  "commit": "6792331efe9d0f9f09516398777d2d3947f9dce7",
+  "files": {
+    "User/config.h": [
+      {
+        "line": 8,
+        "code": "#define CPU_HZ              64000000u"
+      },
+      {
+        "line": 9,
+        "code": "#define UART_BAUDRATE       115200u"
+      },
+      {
+        "line": 10,
+        "code": "#define I2C_SPEED_HZ        100000u"
+      },
+      {
+        "line": 11,
+        "code": "#define OLED_ADDRESS        0x3Cu"
+      },
+      {
+        "line": 21,
+        "code": "#define LED1_GPIO           GPIOA"
+      },
+      {
+        "line": 22,
+        "code": "#define LED1_PIN            GPIO_Pin_0"
+      },
+      {
+        "line": 23,
+        "code": "#define LED2_GPIO           GPIOB"
+      },
+      {
+        "line": 24,
+        "code": "#define LED2_PIN            GPIO_Pin_0"
+      },
+      {
+        "line": 25,
+        "code": "#define BUZZER_GPIO         GPIOB"
+      },
+      {
+        "line": 26,
+        "code": "#define BUZZER_PIN          GPIO_Pin_14"
+      },
+      {
+        "line": 29,
+        "code": "#define BUZZER_ACTIVE_LOW   1"
+      },
+      {
+        "line": 39,
+        "code": "#define SERVO_MIN_ANGLE        35u"
+      },
+      {
+        "line": 40,
+        "code": "#define SERVO_CENTER_ANGLE     90u"
+      },
+      {
+        "line": 41,
+        "code": "#define SERVO_MAX_ANGLE        145u"
+      },
+      {
+        "line": 42,
+        "code": "#define SERVO_MIN_PULSE_US     1100u"
+      },
+      {
+        "line": 43,
+        "code": "#define SERVO_MAX_PULSE_US     1900u"
+      }
+    ],
+    "Hardware/board.c": [
+      {
+        "line": 37,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_Out_PP;"
+      },
+      {
+        "line": 82,
+        "code": "if ((value & GPIO_Pin_12) == 0u) { keys |= 0x01u; }"
+      },
+      {
+        "line": 83,
+        "code": "if ((value & GPIO_Pin_15) == 0u) { keys |= 0x02u; }"
+      },
+      {
+        "line": 84,
+        "code": "if ((value & GPIO_Pin_8) == 0u)  { keys |= 0x04u; }"
+      },
+      {
+        "line": 85,
+        "code": "if ((value & GPIO_Pin_9) == 0u)  { keys |= 0x08u; }"
+      },
+      {
+        "line": 214,
+        "code": "gpio.GPIO_Pin = GPIO_Pin_9;"
+      },
+      {
+        "line": 216,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_AF_PP;"
+      },
+      {
+        "line": 218,
+        "code": "gpio.GPIO_Pin = GPIO_Pin_10;"
+      },
+      {
+        "line": 219,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_IN_FLOATING;"
+      },
+      {
+        "line": 224,
+        "code": "usart.USART_WordLength = USART_WordLength_8b;"
+      },
+      {
+        "line": 225,
+        "code": "usart.USART_StopBits = USART_StopBits_1;"
+      },
+      {
+        "line": 226,
+        "code": "usart.USART_Parity = USART_Parity_No;"
+      },
+      {
+        "line": 227,
+        "code": "usart.USART_HardwareFlowControl = USART_HardwareFlowControl_None;"
+      },
+      {
+        "line": 244,
+        "code": "gpio.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_12 | GPIO_Pin_15;"
+      },
+      {
+        "line": 246,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_IPU;"
+      },
+      {
+        "line": 249,
+        "code": "gpio.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;"
+      },
+      {
+        "line": 250,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_IPU;"
+      },
+      {
+        "line": 257,
+        "code": "TIM_EncoderInterfaceConfig("
+      },
+      {
+        "line": 259,
+        "code": "TIM_EncoderMode_TI12,"
+      },
+      {
+        "line": 275,
+        "code": "gpio.GPIO_Pin = GPIO_Pin_1;"
+      },
+      {
+        "line": 276,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_AIN;"
+      },
+      {
+        "line": 284,
+        "code": "ADC1->SQR3 = 1u;"
+      }
+    ],
+    "Hardware/bus.c": [
+      {
+        "line": 11,
+        "code": "i2c.I2C_ClockSpeed = I2C_SPEED_HZ;"
+      },
+      {
+        "line": 13,
+        "code": "I2C_Init(I2C1, &i2c);"
+      },
+      {
+        "line": 14,
+        "code": "I2C_Cmd(I2C1, ENABLE);"
+      },
+      {
+        "line": 30,
+        "code": "I2C_Cmd(I2C1, DISABLE);"
+      },
+      {
+        "line": 31,
+        "code": "gpio.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;"
+      },
+      {
+        "line": 32,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_Out_OD;"
+      },
+      {
+        "line": 35,
+        "code": "GPIO_SetBits(GPIOB, GPIO_Pin_6 | GPIO_Pin_7);"
+      },
+      {
+        "line": 38,
+        "code": "for (pulse = 0u; pulse < 9u && !GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_7); pulse++) {"
+      },
+      {
+        "line": 39,
+        "code": "GPIO_ResetBits(GPIOB, GPIO_Pin_6);"
+      },
+      {
+        "line": 41,
+        "code": "GPIO_SetBits(GPIOB, GPIO_Pin_6);"
+      },
+      {
+        "line": 44,
+        "code": "GPIO_ResetBits(GPIOB, GPIO_Pin_7);"
+      },
+      {
+        "line": 46,
+        "code": "GPIO_SetBits(GPIOB, GPIO_Pin_6);"
+      },
+      {
+        "line": 48,
+        "code": "GPIO_SetBits(GPIOB, GPIO_Pin_7);"
+      },
+      {
+        "line": 50,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_AF_OD;"
+      },
+      {
+        "line": 52,
+        "code": "I2C_SoftwareResetCmd(I2C1, ENABLE);"
+      },
+      {
+        "line": 53,
+        "code": "I2C_SoftwareResetCmd(I2C1, DISABLE);"
+      },
+      {
+        "line": 60,
+        "code": "while ((I2C1->SR1 & flag) == 0u) {"
+      },
+      {
+        "line": 61,
+        "code": "if ((I2C1->SR1 & (I2C_SR1_AF | I2C_SR1_BERR | I2C_SR1_ARLO | I2C_SR1_OVR)) != 0u) {"
+      },
+      {
+        "line": 73,
+        "code": "volatile uint32_t value = I2C1->SR1;"
+      },
+      {
+        "line": 74,
+        "code": "value = I2C1->SR2;"
+      },
+      {
+        "line": 80,
+        "code": "I2C_GenerateSTOP(I2C1, ENABLE);"
+      },
+      {
+        "line": 94,
+        "code": "while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY) != RESET) {"
+      },
+      {
+        "line": 99,
+        "code": "I2C_GenerateSTART(I2C1, ENABLE);"
+      },
+      {
+        "line": 103,
+        "code": "I2C_Send7bitAddress(I2C1, (uint8_t)(address << 1), I2C_Direction_Transmitter);"
+      },
+      {
+        "line": 112,
+        "code": "I2C_SendData(I2C1, data[i]);"
+      },
+      {
+        "line": 117,
+        "code": "I2C_GenerateSTOP(I2C1, ENABLE);"
+      },
+      {
+        "line": 125,
+        "code": "while (I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY) != RESET) {"
+      },
+      {
+        "line": 130,
+        "code": "I2C_GenerateSTART(I2C1, ENABLE);"
+      },
+      {
+        "line": 132,
+        "code": "I2C_Send7bitAddress(I2C1, (uint8_t)(address << 1), I2C_Direction_Receiver);"
+      },
+      {
+        "line": 134,
+        "code": "I2C_AcknowledgeConfig(I2C1, DISABLE);"
+      },
+      {
+        "line": 136,
+        "code": "I2C_GenerateSTOP(I2C1, ENABLE);"
+      },
+      {
+        "line": 138,
+        "code": "I2C_AcknowledgeConfig(I2C1, ENABLE);"
+      },
+      {
+        "line": 141,
+        "code": "*value = I2C_ReceiveData(I2C1);"
+      },
+      {
+        "line": 142,
+        "code": "I2C_AcknowledgeConfig(I2C1, ENABLE);"
+      }
+    ],
+    "Hardware/mpu_soft_i2c.c": [
+      {
+        "line": 8,
+        "code": "#define MPU_GPIO     GPIOB"
+      },
+      {
+        "line": 9,
+        "code": "#define MPU_SCL_PIN GPIO_Pin_10"
+      },
+      {
+        "line": 10,
+        "code": "#define MPU_SDA_PIN GPIO_Pin_11"
+      },
+      {
+        "line": 86,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_Out_OD;"
+      }
+    ],
+    "Hardware/servo.c": [
+      {
+        "line": 32,
+        "code": "RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_TIM1, ENABLE);"
+      },
+      {
+        "line": 33,
+        "code": "gpio.GPIO_Pin = GPIO_Pin_8;"
+      },
+      {
+        "line": 35,
+        "code": "gpio.GPIO_Mode = GPIO_Mode_AF_PP;"
+      },
+      {
+        "line": 38,
+        "code": "timer.TIM_Prescaler = 63u;"
+      },
+      {
+        "line": 39,
+        "code": "timer.TIM_Period = 19999u;"
+      },
+      {
+        "line": 42,
+        "code": "TIM_TimeBaseInit(TIM1, &timer);"
+      },
+      {
+        "line": 48,
+        "code": "TIM_OC1Init(TIM1, &oc);"
+      },
+      {
+        "line": 49,
+        "code": "TIM_OC1PreloadConfig(TIM1, TIM_OCPreload_Enable);"
+      },
+      {
+        "line": 50,
+        "code": "TIM_ARRPreloadConfig(TIM1, ENABLE);"
+      },
+      {
+        "line": 51,
+        "code": "TIM_Cmd(TIM1, ENABLE);"
+      },
+      {
+        "line": 52,
+        "code": "TIM_CtrlPWMOutputs(TIM1, ENABLE);"
+      },
+      {
+        "line": 63,
+        "code": "TIM_SetCompare1(TIM1, angle_to_pulse(angle));"
+      },
+      {
+        "line": 69,
+        "code": "TIM_CCxCmd(TIM1, TIM_Channel_1, g_enabled ? TIM_CCx_Enable : TIM_CCx_Disable);"
+      }
+    ],
+    "User/sensors.c": [
+      {
+        "line": 48,
+        "code": "uint8_t who = 0u;"
+      },
+      {
+        "line": 49,
+        "code": "g_mpu_address = 0x68u;"
+      },
+      {
+        "line": 50,
+        "code": "if (!mpu_bus_read_register_byte(g_mpu_address, 0x75u, &who) ||"
+      },
+      {
+        "line": 51,
+        "code": "(who != 0x68u && who != 0x69u)) {"
+      },
+      {
+        "line": 52,
+        "code": "g_mpu_address = 0x69u;"
+      },
+      {
+        "line": 53,
+        "code": "if (!mpu_bus_read_register_byte(g_mpu_address, 0x75u, &who) ||"
+      },
+      {
+        "line": 54,
+        "code": "(who != 0x68u && who != 0x69u)) {"
+      }
+    ],
+    "User/main.c": [
+      {
+        "line": 88,
+        "code": "uint8_t who68 = 0u, who69 = 0u;"
+      },
+      {
+        "line": 92,
+        "code": "int read68 = ack68 && mpu_bus_read_register_byte(0x68u, 0x75u, &who68);"
+      },
+      {
+        "line": 93,
+        "code": "int read69 = ack69 && mpu_bus_read_register_byte(0x69u, 0x75u, &who69);"
+      },
+      {
+        "line": 101,
+        "code": "(unsigned)(ack68 ? 1u : 0u), (unsigned)(read68 ? 1u : 0u), (unsigned)who68);"
+      },
+      {
+        "line": 105,
+        "code": "(unsigned)(ack69 ? 1u : 0u), (unsigned)(read69 ? 1u : 0u), (unsigned)who69);"
+      },
+      {
+        "line": 108,
+        "code": "if (read68 && (who68 == 0x68u || who68 == 0x69u)) { address = 0x68u; }"
+      },
+      {
+        "line": 109,
+        "code": "else if (read69 && (who69 == 0x68u || who69 == 0x69u)) { address = 0x69u; }"
+      },
+      {
+        "line": 111,
+        "code": "(void)uart_send(\"MPU RESULT=NO_VALID_DEVICE\\r\\n\");"
+      },
+      {
+        "line": 290,
+        "code": "} else if (strcmp(line, \"LED AUTO\") == 0) {"
+      },
+      {
+        "line": 293,
+        "code": "} else if (strcmp(line, \"LED1 ON\") == 0) {"
+      },
+      {
+        "line": 297,
+        "code": "} else if (strcmp(line, \"LED1 OFF\") == 0) {"
+      },
+      {
+        "line": 301,
+        "code": "} else if (strcmp(line, \"LED2 ON\") == 0) {"
+      },
+      {
+        "line": 305,
+        "code": "} else if (strcmp(line, \"LED2 OFF\") == 0) {"
+      },
+      {
+        "line": 309,
+        "code": "} else if (strcmp(line, \"BUZZER TEST\") == 0) {"
+      },
+      {
+        "line": 312,
+        "code": "} else if (strcmp(line, \"BUZZER ON\") == 0) {"
+      },
+      {
+        "line": 316,
+        "code": "} else if (strcmp(line, \"BUZZER OFF\") == 0) {"
+      },
+      {
+        "line": 371,
+        "code": "} else if (strcmp(line, \"TAIL CENTER\") == 0) {"
+      },
+      {
+        "line": 375,
+        "code": "} else if (strcmp(line, \"TAIL WAG\") == 0) {"
+      },
+      {
+        "line": 379,
+        "code": "} else if (strcmp(line, \"TAIL SWAY\") == 0) {"
+      },
+      {
+        "line": 383,
+        "code": "} else if (strcmp(line, \"TAIL OFF\") == 0) {"
+      },
+      {
+        "line": 387,
+        "code": "} else if (strcmp(line, \"TAIL AUTO ON\") == 0) {"
+      },
+      {
+        "line": 391,
+        "code": "} else if (strcmp(line, \"TAIL AUTO OFF\") == 0) {"
+      },
+      {
+        "line": 394,
+        "code": "} else if (strncmp(line, \"TAIL SET \", 9u) == 0) {"
+      },
+      {
+        "line": 433,
+        "code": "} else if (strcmp(line, \"I2C SCAN\") == 0) {"
+      },
+      {
+        "line": 435,
+        "code": "} else if (strcmp(line, \"MPU DIAG\") == 0) {"
+      }
+    ]
+  },
+  "source_blobs": {
+    "User/config.h": "2ad07a537cf048dfd5f52d05bc59f12058d5a90b",
+    "Hardware/board.c": "ecfbede3b3918d76814b434695f7f5348db35110",
+    "Hardware/bus.c": "eab1b52e815f6cde08ebd0356e8d7c77a40e40ba",
+    "Hardware/mpu_soft_i2c.c": "01a4ad0aa7136f80ec991a704aee302089ad945e",
+    "Hardware/servo.c": "a391c549c70df0e2758af03589901e65f23caf14",
+    "User/sensors.c": "567e4fc9f766ae5ecc6a6e21145e013bf691ce74",
+    "User/main.c": "a092f1431d13b5bf96c21d386fea790d5adebd1f"
+  },
+  "note": "源码证据非编译/运行证明；引脚用途结合调用链人工核对。"
+}
